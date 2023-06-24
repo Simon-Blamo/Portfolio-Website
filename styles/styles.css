@@ -238,7 +238,7 @@ body {
 
 }
 
-.wrapper i {
+.wrapper #left, .wrapper #right {
     height: 50px;
     width: 50px;
     background: #FFFAFA;
@@ -297,6 +297,11 @@ body {
     align-items: center;
 }
 
+.projectsCard .projectImg a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #projects .projectsCard img {
     width: 36vh;
     min-width: 28vh;
@@ -306,9 +311,7 @@ body {
     border-bottom: 3px solid #1B1C1E;
 }
 
-#projects .projectsCard img:hover{
-    background: rgba(0,0,0,0.2);
-}
+
 
 #projects .projectsInfo {
     text-align: center;
