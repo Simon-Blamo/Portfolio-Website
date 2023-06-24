@@ -419,7 +419,7 @@ body {
 }
 
 
-@media screen and (max-width:525px){
+@media screen and (max-width:600px){
     .wrapper .carousel {
         display:grid;
         grid-auto-flow: column;
