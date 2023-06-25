@@ -73,7 +73,7 @@ const nav = document.getElementById('navbar');
                     } else if (windowWidth > 525 && windowWidth <= 1000) {
                         carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth * 2.475) : (firstCardWidth * 2.475);
                     } else if (windowWidth <= 525) {
-                        carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth) : (firstCardWidth);
+                        carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth * 1.2) : (firstCardWidth * 1.2);
                         console.log(`The viewport's width is ${windowWidth}`);
                     }
                     
