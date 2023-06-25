@@ -6,7 +6,7 @@ const nav = document.getElementById('navbar');
             const carousel = document.querySelector(".carousel");
             const arrowBtns = document.querySelectorAll(".wrapper i");
             let windowWidth = window.innerWidth;
-            const firstCardWidth = (carousel.querySelector(".projectsCard").offsetWidth);
+            let firstCardWidth = (carousel.querySelector(".projectsCard").offsetWidth);
             let isDragging = false, startX, startScrollLeft;
 
             var typed = new Typed('#dynamic', {
@@ -73,7 +73,7 @@ const nav = document.getElementById('navbar');
                     } else if (windowWidth > 525 && windowWidth <= 1000) {
                         carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
                     } else if (windowWidth <= 525) {
-                        carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth * 1.65) : (firstCardWidth * 1.65);
+                        carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth) : (firstCardWidth);
                         console.log(`The viewport's width is ${windowWidth}`);
                     }
                     
@@ -101,6 +101,7 @@ const nav = document.getElementById('navbar');
 
             window.addEventListener("resize", () => {
                 windowWidth =  window.innerWidth;
+                firstCardWidth = (carousel.querySelector(".projectsCard").offsetWidth);
             });
 
             carousel.addEventListener("mousedown", dragStart);
