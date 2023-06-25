@@ -169,7 +169,6 @@ body {
 }
 
 #about_me .aboutMeCard img {
-    position: absolute;
     max-width: 50vw;
     max-height: 50vh;
     border-radius: 5px 5px 0 0;
@@ -304,6 +303,7 @@ body {
 }
 
 #projects .projectsCard img {
+    position: relative;
     width: 36vh;
     min-width: 28vh;
     max-width: 36vw;
