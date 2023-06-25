@@ -228,9 +228,9 @@ body {
 .wrapper .carousel {
     display:grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
+    grid-auto-columns: calc((100% / 3) - 2vh);
     justify-items: center;
-    gap: 4vh;
+    gap: 3vh;
     padding-bottom: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
