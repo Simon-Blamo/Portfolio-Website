@@ -298,6 +298,7 @@ body {
 }
 
 .projectsCard .projectImg a {
+    position: absolute;
     text-decoration: none;
     color: inherit;
 }
