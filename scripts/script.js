@@ -68,15 +68,7 @@ const nav = document.getElementById('navbar');
 
             arrowBtns.forEach(btn => {
                 btn.addEventListener("click", () => {
-                    if(windowWidth > 1000){
-                        carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth * 1.85) : (firstCardWidth * 1.85);
-                    } else if (windowWidth > 525 && windowWidth <= 1000) {
-                        carousel.scrollLeft += btn.id == "left" ? (-firstCardWidth * 2.475) : (firstCardWidth * 2.475);
-                    } else if (windowWidth <= 525) {
-                        carousel.scrollLeft += btn.id == "left" ? (-windowWidth) : (windowWidth);
-                        console.log(`The viewport's width is ${windowWidth}`);
-                    }
-                    
+                    carousel.scrollLeft += btn.id == "left" ? (-windowWidth) : (windowWidth);
                 })
             });
 
