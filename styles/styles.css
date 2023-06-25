@@ -297,12 +297,6 @@ body {
     align-items: center;
 }
 
-.projectsCard .projectImg a {
-    position: absolute;
-    text-decoration: none;
-    color: inherit;
-}
-
 #projects .projectsCard img {
     position: relative;
     width: 36vh;
