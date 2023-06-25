@@ -36,7 +36,7 @@ const nav = document.getElementById('navbar');
                     project.classList.add("non-active");
                     contact.classList.remove("active");
                     contact.classList.add("non-active");
-                } else if ((scrolled >= (window.innerHeight*2)) && (scrolled < (window.innerHeight*3))){
+                } else if ((scrolled >= (window.innerHeight*2)) && (scrolled < (window.innerHeight*2.75))){
                     home.classList.remove("active");
                     home.classList.add("non-active");
                     about.classList.remove("active");
