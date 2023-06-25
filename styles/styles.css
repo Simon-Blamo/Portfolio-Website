@@ -305,6 +305,7 @@ body {
     max-height: 50vh;
     border-radius: 5px 5px 0 0;
     border-bottom: 3px solid #1B1C1E;
+    cursor: pointer;
 }
 
 
