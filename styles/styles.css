@@ -420,7 +420,7 @@ body {
     .wrapper .carousel {
         display:grid;
         grid-auto-flow: column;
-        grid-auto-columns: calc(75%);
+        grid-auto-columns: calc(85%);
         justify-items: center;
         gap: 0vh;
     }
