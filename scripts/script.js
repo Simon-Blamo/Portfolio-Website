@@ -94,7 +94,7 @@ const nav = document.getElementById('navbar');
 
             arrowBtns.forEach(btn => {
                 btn.addEventListener("click", () => {
-                    carousel.scrollLeft += btn.id == "left" ? (-windowWidth) : (windowWidth);
+                    carousel.scrollLeft += btn.id == "left" ? (-window.innerWidth) : (window.innerWidth);
                 })
             });
 
