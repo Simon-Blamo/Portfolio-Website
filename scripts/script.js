@@ -67,12 +67,10 @@ const nav = document.getElementById('navbar');
                     contact.style.color = "#FFFAFA";
                 }
 
-                if(window.innerWidth <=1000){
-                    if(scrolled >= window.innerWidth){
-                        navCon.style.position = "sticky";
-                    } else {
-                        navCon.style.position = "absolute";
-                    }
+                if(scrolled >= window.innerWidth){
+                    navCon.style.position = "sticky";
+                } else {
+                    navCon.style.position = "absolute";
                 }
             });
 

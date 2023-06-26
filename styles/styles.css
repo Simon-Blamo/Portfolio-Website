@@ -46,7 +46,11 @@ body {
     overflow: hidden;
 }
 
-
+.navContainer{
+    z-index: 5;
+    display: inline;
+    position: absolute;
+}
 
 .navbar {
     display: inline-flex;
