@@ -67,6 +67,7 @@ body {
 }
 
 .navbar a {
+    color: #FFFAFA;
     text-decoration: none;
     margin: 20px;
     transition:color 0.3s ease-in-out;

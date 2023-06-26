@@ -6,7 +6,7 @@ const nav = document.getElementById('navbar');
             const carousel = document.querySelector(".carousel");
             const arrowBtns = document.querySelectorAll(".wrapper i");
             let isDragging = false, startX, startScrollLeft;
-            let isPlayableVideo = 0;
+            let windowWidth = window.innerWidth;
 
             var typed = new Typed('#dynamic', {
                 strings: ['Software Engineer.', 'Web Developer.', 'Cyber-Security Specialist.'],
@@ -14,15 +14,6 @@ const nav = document.getElementById('navbar');
                 backSpeed: 20,
                 loop: true,
                 loopCount: Infinity,
-            });
-
-            
-
-            $('body').on('touchstart',function(){
-                if (document.getElementById("theVid").paused) {
-                document.getElementById("theVid").play();
-                    isPlayableVideo = 1;
-                }
             });
 
             function myMenu(){
@@ -54,6 +45,7 @@ const nav = document.getElementById('navbar');
             window.addEventListener('scroll', function(){
                 var scrolled = window.scrollY;
                 if((scrolled >= (window.innerHeight)) && (scrolled < (window.innerHeight*2))){
+                    console.log("You have entered!")
                     home.classList.remove("active");
                     home.classList.add("non-active");
                     about.classList.add("active");
@@ -94,7 +86,7 @@ const nav = document.getElementById('navbar');
 
             arrowBtns.forEach(btn => {
                 btn.addEventListener("click", () => {
-                    carousel.scrollLeft += btn.id == "left" ? (-window.innerWidth) : (window.innerWidth);
+                    carousel.scrollLeft += btn.id == "left" ? (-windowWidth) : (windowWidth);
                 })
             });
 
@@ -119,6 +111,7 @@ const nav = document.getElementById('navbar');
 
             window.addEventListener("resize", () => {
                 const x = document.getElementById("myLinks");
+                windowWidth = window.innerWidth;
                 if(window.innerWidth > 1000) {
                     x.style.display = "inherit";
                 } else if (window.innerWidth <= 1000) {
