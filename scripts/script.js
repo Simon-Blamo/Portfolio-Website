@@ -117,6 +117,5 @@ const nav = document.getElementById('navbar');
             });
 
             carousel.addEventListener("mousedown", dragStart);
-            
             document.addEventListener("mouseup", dragStop);
             carousel.addEventListener("mousemove", dragging);

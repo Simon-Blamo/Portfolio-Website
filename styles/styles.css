@@ -382,6 +382,9 @@ body {
 }
 
 @media screen and (max-width:1000px){
+    .navbar {
+        position: sticky;
+    }
     .navbar #myLinks{ 
         display: none;
         flex-direction:column;
