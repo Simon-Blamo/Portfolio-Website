@@ -275,7 +275,7 @@ body {
 
 .carousel.dragging .projectsCard {
     cursor:grab;
-    user-select: none;icky;
+    user-select: none;
 }
 
 .carousel .projectsCard {
