@@ -46,31 +46,29 @@ const nav = document.getElementById('navbar');
             window.addEventListener('scroll', function(){
                 var scrolled = window.scrollY;
                 if((scrolled >= (window.innerHeight)) && (scrolled < (window.innerHeight*2))){
+                    navCon.style.position = "sticky";
                     home.style.color = "#FFFAFA";
                     about.style.color = "coral";
                     project.style.color = "#FFFAFA";
                     contact.style.color = "#FFFAFA";
                 } else if ((scrolled >= (window.innerHeight*2)) && (scrolled < (window.innerHeight*2.25))){
+                    navCon.style.position = "sticky";
                     home.style.color = "#FFFAFA";
                     about.style.color = "#FFFAFA";
                     project.style.color = "coral";
                     contact.style.color = "#FFFAFA";
                 } else if  (scrolled >= (window.innerHeight*2.25)){
+                    navCon.style.position = "sticky";
                     home.style.color = "#FFFAFA";
                     about.style.color = "#FFFAFA";
                     project.style.color = "#FFFAFA";
                     contact.style.color = "coral"
                 } else {
+                    navCon.style.position = "absolute";
                     home.style.color = "coral";
                     about.style.color = "#FFFAFA";
                     project.style.color = "#FFFAFA";
                     contact.style.color = "#FFFAFA";
-                }
-
-                if(scrolled >= window.innerHeight){
-                    navCon.style.position = "sticky";
-                } else {
-                    navCon.style.position = "absolute";
                 }
             });
 
