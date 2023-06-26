@@ -382,6 +382,7 @@ body {
     color: #FFFAFA;
 }
 
+
 @media screen and (max-width:1000px){
     .navbar {
         position: sticky;

@@ -45,42 +45,25 @@ const nav = document.getElementById('navbar');
             window.addEventListener('scroll', function(){
                 var scrolled = window.scrollY;
                 if((scrolled >= (window.innerHeight)) && (scrolled < (window.innerHeight*2))){
-                    console.log("You have entered!")
-                    home.classList.remove("active");
-                    home.classList.add("non-active");
-                    about.classList.add("active");
-                    about.classList.remove("non-active");
-                    project.classList.remove("active");
-                    project.classList.add("non-active");
-                    contact.classList.remove("active");
-                    contact.classList.add("non-active");
+                    home.style.color = "#FFFAFA";
+                    about.style.color = "coral";
+                    project.style.color = "#FFFAFA";
+                    contact.style.color = "#FFFAFA";
                 } else if ((scrolled >= (window.innerHeight*2)) && (scrolled < (window.innerHeight*2.25))){
-                    home.classList.remove("active");
-                    home.classList.add("non-active");
-                    about.classList.remove("active");
-                    about.classList.add("non-active");
-                    project.classList.add("active");
-                    project.classList.remove("non-active");
-                    contact.classList.remove("active");
-                    contact.classList.add("non-active");
+                    home.style.color = "#FFFAFA";
+                    about.style.color = "#FFFAFA";
+                    project.style.color = "coral";
+                    contact.style.color = "#FFFAFA";
                 } else if  (scrolled >= (window.innerHeight*2.25)){
-                    home.classList.remove("active");
-                    home.classList.add("non-active");
-                    about.classList.remove("active");
-                    about.classList.add("non-active");
-                    project.classList.remove("active");
-                    project.classList.add("non-active");
-                    contact.classList.add("active");
-                    contact.classList.remove("non-active");
+                    home.style.color = "#FFFAFA";
+                    about.style.color = "#FFFAFA";
+                    project.style.color = "#FFFAFA";
+                    contact.style.color = "coral"
                 } else {
-                    home.classList.add("active");
-                    home.classList.remove("non-active");
-                    about.classList.remove("active");
-                    about.classList.add("non-active");
-                    project.classList.remove("active");
-                    project.classList.add("non-active");
-                    contact.classList.remove("active");
-                    contact.classList.add("non-active");
+                    home.style.color = "coral";
+                    about.style.color = "#FFFAFA";
+                    project.style.color = "#FFFAFA";
+                    contact.style.color = "#FFFAFA";
                 }
             });
 
