@@ -31,6 +31,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    object-fit: contain;
 }
 
 .Content:before{
@@ -273,7 +274,7 @@ body {
 
 .carousel.dragging .projectsCard {
     cursor:grab;
-    user-select: none;
+    user-select: none;icky;
 }
 
 .carousel .projectsCard {
