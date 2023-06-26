@@ -384,6 +384,7 @@ body {
 
 @media screen and (max-width:1000px){
     .navContainer{
+        z-index: 5;
         display: inline;
         position: absolute;
     }
