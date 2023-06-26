@@ -6,6 +6,7 @@ const nav = document.getElementById('navbar');
             const carousel = document.querySelector(".carousel");
             const arrowBtns = document.querySelectorAll(".wrapper i");
             let isDragging = false, startX, startScrollLeft;
+            let isPlayableVideo = 0;
 
             var typed = new Typed('#dynamic', {
                 strings: ['Software Engineer.', 'Web Developer.', 'Cyber-Security Specialist.'],
@@ -13,6 +14,15 @@ const nav = document.getElementById('navbar');
                 backSpeed: 20,
                 loop: true,
                 loopCount: Infinity,
+            });
+
+            
+
+            $('body').on('touchstart',function(){
+                if (document.getElementById("theVid").paused) {
+                document.getElementById("theVid").play();
+                    isPlayableVideo = 1;
+                }
             });
 
             function myMenu(){
