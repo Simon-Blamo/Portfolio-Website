@@ -5,6 +5,7 @@ const nav = document.getElementById('navbar');
             const contact = document.getElementById('contactLink');
             const carousel = document.querySelector(".carousel");
             const arrowBtns = document.querySelectorAll(".wrapper i");
+            const navCon = document.querySelector(".navContainer");
             let isDragging = false, startX, startScrollLeft;
             let windowWidth = window.innerWidth;
 
@@ -64,6 +65,14 @@ const nav = document.getElementById('navbar');
                     about.style.color = "#FFFAFA";
                     project.style.color = "#FFFAFA";
                     contact.style.color = "#FFFAFA";
+                }
+
+                if(window.innerWidth <=1000){
+                    if(scrolled >= window.innerWidth){
+                        navCon.style.position = "sticky";
+                    } else {
+                        navCon.style.position = "absolute";
+                    }
                 }
             });
 
