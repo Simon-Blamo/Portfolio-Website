@@ -20,13 +20,11 @@ const nav = document.getElementById('navbar');
                 const x = document.getElementById("myLinks");
                 const y  = document.querySelector(".icon");
                 if (x.style.display === "none") {
-                    nav.style.position = "relative";
                     nav.style.flexDirection = "column";
                     x.style.display = "block";
                     y.style.position = "absolute";
                 } else {
                     x.style.display = "none";
-                    nav.style.position = "sticky";
                     nav.style.flexDirection = "row";
                     y.style.position = "relative";
                 }
@@ -38,7 +36,6 @@ const nav = document.getElementById('navbar');
                 const y  = document.querySelector(".icon");
                 if(window.innerWidth <= 1000) {
                     x.style.display = "none";
-                    nav.style.position = "sticky";
                     nav.style.flexDirection = "row";
                     y.style.position = "relative";
                 }
