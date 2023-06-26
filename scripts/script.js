@@ -5,8 +5,6 @@ const nav = document.getElementById('navbar');
             const contact = document.getElementById('contactLink');
             const carousel = document.querySelector(".carousel");
             const arrowBtns = document.querySelectorAll(".wrapper i");
-            let windowWidth = window.innerWidth;
-            let firstCardWidth = (carousel.querySelector(".projectsCard").offsetWidth);
             let isDragging = false, startX, startScrollLeft;
 
             var typed = new Typed('#dynamic', {
@@ -17,12 +15,33 @@ const nav = document.getElementById('navbar');
                 loopCount: Infinity,
             });
 
-            function open() {
-                home.className += "clear";
-                about.className += "clear";
-                project.className += "clear";
-                contact.className += "clear";
-                nav.className += "click";
+            function myMenu(){
+                const nav = document.getElementById("navbar");
+                const x = document.getElementById("myLinks");
+                const y  = document.querySelector(".icon");
+                if (x.style.display === "none") {
+                    nav.style.position = "relative";
+                    nav.style.flexDirection = "column";
+                    x.style.display = "block";
+                    y.style.position = "absolute";
+                } else {
+                    x.style.display = "none";
+                    nav.style.position = "sticky";
+                    nav.style.flexDirection = "row";
+                    y.style.position = "relative";
+                }
+            }
+
+            function myMenuClose() {
+                const nav = document.getElementById("navbar");
+                const x = document.getElementById("myLinks");
+                const y  = document.querySelector(".icon");
+                if(window.innerWidth <= 1000) {
+                    x.style.display = "none";
+                    nav.style.position = "sticky";
+                    nav.style.flexDirection = "row";
+                    y.style.position = "relative";
+                }
             }
 
             window.addEventListener('scroll', function(){
@@ -92,8 +111,12 @@ const nav = document.getElementById('navbar');
             }
 
             window.addEventListener("resize", () => {
-                windowWidth =  window.innerWidth;
-                firstCardWidth = (carousel.querySelector(".projectsCard").offsetWidth);
+                const x = document.getElementById("myLinks");
+                if(window.innerWidth > 1000) {
+                    x.style.display = "inherit";
+                } else if (window.innerWidth <= 1000) {
+                    x.style.display = "none";
+                }
             });
 
             carousel.addEventListener("mousedown", dragStart);

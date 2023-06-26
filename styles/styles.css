@@ -308,8 +308,6 @@ body {
     cursor: pointer;
 }
 
-
-
 #projects .projectsInfo {
     text-align: center;
     display: flex;
@@ -375,35 +373,42 @@ body {
     color: coral;
 }
 
-/* @media screen and (max-width:1100px){
-    .wrapper .carousel {
-        display:grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100%/3) - 1vh);
-        justify-items: center;
-        gap: 1vh;
-    }
+.active {
+    color: coral;
+}
 
-    #projects p {
-        font-size: 1.65vh;
-    }
-} */
+.non-active {
+    color: #FFFAFA;
+}
 
 @media screen and (max-width:1000px){
-    .navbar a:not(:last-child) { 
+    .navbar #myLinks{ 
         display: none;
+        flex-direction:column;
+        justify-content: center;
+        position: relative;
+        align-self: flex-start;
+        margin-top: 25vh;
     }
-    .navbar .icon {
-        display: block;
+
+    #myLinks a{
         color: #FFFAFA;
+        background-color: #27292c;
+        text-decoration: none;
+        margin: 0 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 5vh;
+        min-width: 100vw;
+        border-bottom: 1px solid coral;
     }
 
-    .navbar.click{
-        position: absolute;
-    }
-
-    .clear{
-        display: none;
+    .navbar .icon {
+        display: inline;
+        position: relative;
+        color: #FFFAFA;
     }
 
     .wrapper .carousel {

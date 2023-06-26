@@ -31,13 +31,15 @@
                 </div>
             </div>
             <div class="navbar" id="navbar">
-                <a id="homeLink" href="#home">Home</a>
-                <a id="aboutLink" href="#about_me">About Me</a>
-                <a id="projectLink" href="#projects">Projects</a>
-                <a id="contactLink" href="#contact_me">Contact</a>
-                <a href="javascript:void(0);" class="icon" onclick="open()">
+                <a href="javascript:void(0);" class="icon" onclick="myMenu()">
                     <i class="fa fa-bars"></i>
                 </a>
+                <div id="myLinks">
+                    <a id="homeLink" href="#home" onclick="myMenuClose()">Home</a>
+                    <a id="aboutLink" href="#about_me" onclick="myMenuClose()">About Me</a>
+                    <a id="projectLink" href="#projects" onclick="myMenuClose()">Projects</a>
+                    <a id="contactLink" href="#contact_me" onclick="myMenuClose()">Contact</a>
+                </div>
             </div>
             <div class="" id="about_me">
                 <h1><span>About Me</span></h1>
@@ -130,14 +132,5 @@
                 </div>
             </div>
         </div>
-        <style>
-            .active {
-                color: coral;
-            }
-
-            .non-active {
-                color: #FFFAFA;
-            }
-        </style>
     </body>
 </html>
