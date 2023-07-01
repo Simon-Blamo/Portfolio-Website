@@ -6,6 +6,7 @@ const nav = document.getElementById('navbar');
             const carousel = document.querySelector(".carousel");
             const arrowBtns = document.querySelectorAll(".wrapper i");
             const navCon = document.querySelector(".navContainer");
+            let wrapper = document.querySelector(".wrapper").offsetWidth;
             let isDragging = false, startX, startScrollLeft;
             let windowWidth = window.innerWidth;
 
@@ -100,9 +101,9 @@ const nav = document.getElementById('navbar');
             window.addEventListener("resize", () => {
                 const x = document.getElementById("myLinks");
                 windowWidth = window.innerWidth;
-                if(window.innerWidth > 1000) {
+                if(window.innerWidth > 1425) {
                     x.style.display = "inherit";
-                } else if (window.innerWidth <= 1000) {
+                } else if (window.innerWidth <= 1425) {
                     x.style.display = "none";
                 }
             });

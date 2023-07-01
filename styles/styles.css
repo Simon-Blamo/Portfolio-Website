@@ -388,7 +388,7 @@ body {
 }
 
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1425px){
     .navContainer{
         z-index: 5;
         display: inline;
@@ -436,7 +436,7 @@ body {
 }
 
 
-@media screen and (max-width:600px){
+@media screen and (max-width:755px){
     .wrapper .carousel {
         display:grid;
         grid-auto-flow: column;
