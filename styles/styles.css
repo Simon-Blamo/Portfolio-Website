@@ -437,6 +437,9 @@ body {
 
 
 @media screen and (max-width:755px){
+    #home #intro{
+        text-shadow: none;
+    }
     .wrapper .carousel {
         display:grid;
         grid-auto-flow: column;
