@@ -437,7 +437,15 @@ body {
 
 
 @media screen and (max-width:755px){
-    #home{
+    #home #intro{
+        text-shadow: none;
+        
+    }
+    
+    #home #intro_lower{
+        text-shadow: none;
+    }
+    #home #intro_lower #dynamic{
         text-shadow: none;
     }
     .wrapper .carousel {
