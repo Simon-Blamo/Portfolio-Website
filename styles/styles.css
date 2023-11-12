@@ -110,7 +110,7 @@ body {
     align-items: center;
 }
 
-#homeIntroLower{
+#homeIntro{
     text-shadow: 2px 1px 2px #000;
     text-align: center;
     line-height: 1.4;
@@ -118,10 +118,10 @@ body {
     position: relative;
     color: #FFFAFA;
     font-size:3.2vh;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
-#home #intro_lower{
+#homeIntroLower{
     text-align: center;
     text-shadow: 2px 1px 2px #000;
     z-index: 2;
@@ -445,15 +445,12 @@ body {
 
 
 @media screen and (max-width:755px){
-    #homeIntroLower {
+    #homeIntro, #homeIntroLower {
         text-shadow: none;
-        
+        max-width: 240px;
     }
     
-    #home #intro_lower{
-        text-shadow: none;
-    }
-    #home #intro_lower #dynamic{
+    #homeIntroLower #dynamic{
         text-shadow: none;
     }
     .wrapper .carousel {
