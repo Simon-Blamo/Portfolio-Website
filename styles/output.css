@@ -4947,13 +4947,6 @@ body {
   z-index: 2;
 }
 
-#home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #homeIntro{
   text-shadow: 2px 1px 2px #000;
 }

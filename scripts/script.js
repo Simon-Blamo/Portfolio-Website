@@ -1,3 +1,12 @@
+import {
+    Carousel,
+    Collapse,
+    Dropdown,
+    initTE,
+} from "../node_modules/tw-elements/dist/js/tw-elements.es.min.js";
+
+initTE({ Collapse, Dropdown, Carousel });
+
 const nav = document.getElementById('navbar');
 const home = document.getElementById('homeLink');
 const about = document.getElementById('aboutLink');
@@ -6,7 +15,7 @@ const contact = document.getElementById('contactLink');
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const navCon = document.querySelector(".navContainer");
-let wrapper = document.querySelector(".wrapper").offsetWidth;
+
 let isDragging = false, startX, startScrollLeft;
 let windowWidth = window.innerWidth;
 
@@ -111,3 +120,5 @@ window.addEventListener("resize", () => {
 carousel.addEventListener("mousedown", dragStart);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mousemove", dragging);
+
+// Initialization for ES Users

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth overflow-scroll overflow-x-hidden ">
     <head>
         <!-- SEO Optimization -->
         <!-- Update Content Attributes -->
@@ -27,24 +27,26 @@
     
         <!-- Include your CSS files here -->
         <link rel="stylesheet" href="../styles/styles.css" defer>
+        <link rel="stylesheet" href="../styles/output.css" defer>
+        <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
-    <body>
-        <div class="video-wrapper">
-            <video id="theVid" src="../videos/backgroundVid.mp4" autoplay muted loop playsinline></video>
+    <body class="bg-[#FFFAFA]">
+        <div id="video-wrapper" class="z-0 absolute top-0 left-0 w-[100%] h-[100%] overflow-hidden object-contain opacity-[50%]">
+            <video id="theVid" src="../videos/backgroundVid.mp4" class="min-h-full min-w-full absolute bottom-0 left-0 object-cover" autoplay muted loop playsinline></video>
         </div>
-        <div class="Content">
-            <div class="" id="home">
-                <div id="homeWrapper">
-                    <h1 id="homeIntro">Hi, my name is Simon Blamo.</h1>
-                    <h1 id="homeIntroLower">I'm an aspiring <span id="dynamic"></span></h1>
+        <div id="content" class="">
+            <div id="home" class="bg-[#a07433] flex flex-col justify-center items-center">
+                <div id="homeWrapper" class="h-full flex flex-col justify-center items-center z-[2]">
+                    <h1 id="homeIntro" class="text-center leading-[1.4] relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] md:max-w-[1000px]">Hi, my name is Simon Blamo.</h1>
+                    <h1 id="homeIntroLower" class="text-center relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] md:leading-[1.5] md:max-w-[1000px]">I'm an aspiring <span id="dynamic"></span></h1>
                 </div>
             </div>
-            <div class="navContainer">
+            <!-- <div class="navContainer">
                 <div class="navbar" id="navbar">
                     <a href="javascript:void(0);" class="icon" onclick="myMenu()">
                         <i class="fa fa-bars"></i>
@@ -56,9 +58,92 @@
                         <a id="contactLink" href="#contact_me" onclick="myMenuClose()">Contact</a>
                     </div>
                 </div>
-            </div>
-            <div class="" id="about_me">
-                <h1><span>About Me</span></h1>
+            </div> -->
+            <nav
+                class="sticky top-0 flex w-full flex-wrap items-center justify-between bg-[#1B1C1E] py-2 text-[#FFFAFA] shadow-lg dark:bg-neutral-600 lg:py-4 z-[2]" data-te-navbar-ref>
+                <div class="flex w-full flex-wrap items-center justify-between px-3">
+                    <button
+                        class="block border-0 bg-transparent px-2 text-[#FFFAFA] hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                        type="button"
+                        data-te-collapse-init
+                        data-te-target="#navbarSupportedContent8"
+                        aria-controls="navbarSupportedContent8"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <!-- Hamburger icon -->
+                        <span class="[&>svg]:w-7">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-7 w-7">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </button>
+                    <!-- Collapsible navbar container -->
+                    <div
+                        class="!visible mt-2 hidden flex-grow basis-[100%] items-center justify-center lg:mt-0 lg:!flex lg:basis-auto"
+                        id="navbarSupportedContent8"
+                        data-te-collapse-item>
+                        <!-- Left links -->
+                        <ul
+                            class="list-style-none flex flex-col pl-0 lg:mt-1 lg:flex-row"
+                            data-te-navbar-nav-ref>
+                            <!-- Home link -->
+                            <li
+                                class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                                data-te-nav-item-ref>
+                                <a
+                                    class="active lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
+                                    aria-current="page"
+                                    href="#home"
+                                    data-te-nav-link-ref
+                                >Home
+                                </a>
+                            </li>
+                            <li
+                                class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                                data-te-nav-item-ref>
+                                <a
+                                    class=" lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
+                                    aria-current="page"
+                                    href="#about_me"
+                                    data-te-nav-link-ref
+                                >About Me
+                                </a>
+                            </li>
+                            <li
+                                class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                                data-te-nav-item-ref>
+                                <a
+                                    class="lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
+                                    aria-current="page"
+                                    href="#projects"
+                                    data-te-nav-link-ref
+                                >Projects
+                                </a>
+                            </li>
+                            <li
+                                class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                                data-te-nav-item-ref>
+                                <a
+                                    class=" lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
+                                    aria-current="page"
+                                    href="#contact_me"
+                                    data-te-nav-link-ref
+                                >Contact Me
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="w-[100vw] h-[100vh] flex justify-center items-center" id="about_me">
+                <!-- <h1 class=""><span>About Me</span></h1>
                 <div class="aboutMeCardCon">
                     <div class="aboutMeCard">
                         <div id="imgStuff"><img src="../images/avatar.png" alt="Myself"></div>
@@ -67,12 +152,59 @@
                             <p>I am a student currently working towards my bachelor's degree in Computer Science at the College of New Jersey. I live in the central New Jersey area. I am hoping to shift my future career in the direction of Web Development, and Cyber Security.</p>
                         </div>
                     </div>
+                </div> -->
+                <div class="flex flex-col justify-around h-[90%]">
+                    <div class="">
+                        <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000]">About Me</span></h2>
+                    </div>
+                    <div class="flex justify-center md:justify-normal">
+                        <div
+                            class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-7xl md:flex-row w-[80%] md:w-full">
+                            <img
+                                class="h-96 md:w-[50%] rounded-t-lg object-cover md:h-auto md:!rounded-none md:!rounded-l-lg"
+                                src="./images/avatar.png"
+                                alt="" />
+                            <div class="flex flex-col justify-around p-6 md:w-[50%] bg-[#FFFFFF] dark:bg-neutral-700 rounded-b-lg">
+                                <h5
+                                    class="mb-2 text-xl font-semibold md:text-5xl text-neutral-800 dark:text-neutral-50   uppercase">Who am I?
+                                    
+                                </h5>
+                                <p class="mb-4 md:text-2xl text-neutral-600 dark:text-neutral-200">
+                                    I am a student currently working towards my bachelor's degree in Computer Science at the College of New Jersey. I live in the central New Jersey area. I am hoping to shift my future career in the direction of Web Development, and Cyber Security.
+                                </p>
+                                <div id="skills" class="flex flex-col">
+                                    <h6 class="dark:text-white">Known Languages & Technologies</h6>
+                                    <div class="w-full flex flex-wrap">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/ruby-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c-programming-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c++-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/java-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/python-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/html-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/css3-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/javascript-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/flask-128.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/react-100.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/icons8-bootstrap-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/tailwind-css-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/mongodb-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/postgres-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/r-project-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/git-96.png">
+                                        <img class="h-[30px] md:h-[52px]" src="./images/langIcons/github-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/linux-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/macos-96.png">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/windows-96.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="" id="projects">
-                <h1><span>Projects</span></h1>
-                <div class="wrapper">
+                <!-- <div class="wrapper">
                     <i id="left" class="fa-solid fa-angle-left"></i>
                     <ul class="carousel">
                         <li class="projectsCard">
@@ -127,6 +259,131 @@
                         </li>
                     </ul>
                     <i id="right" class="fa-solid fa-angle-right"></i>
+                </div> -->
+                <div class="flex flex-col justify-around h-[90%]">
+                    <div class="">
+                        <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000]">Projects</span></h2>
+                    </div>
+                    <div class="flex justify-center">
+                        <div
+                        id="carouselExampleIndicators"
+                        class="relative w-[80%]"
+                        data-te-carousel-init
+                        data-te-ride="carousel">
+                        <!--Carousel indicators-->
+                        <div
+                            class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+                            data-te-carousel-indicators>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="0"
+                            data-te-carousel-active
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-current="true"
+                            aria-label="Slide 1"></button>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="1"
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-label="Slide 2"></button>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="2"
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-label="Slide 3"></button>
+                        </div>
+
+                        <!--Carousel items-->
+                        <div
+                            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                            <!--First item-->
+                            <div
+                            class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                            data-te-carousel-item
+                            data-te-carousel-active>
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+                                    class="block w-full"
+                                    alt="Wild Landscape" 
+                                />
+                            </div>
+                            <!--Second item-->
+                            <div
+                            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                            data-te-carousel-item>
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+                                    class="block w-full"
+                                    alt="Camera" 
+                                />
+                            </div>
+                            <!--Third item-->
+                            <div
+                            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                            data-te-carousel-item>
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+                                class="block w-full"
+                                alt="Exotic Fruits" />
+                            </div>
+                        </div>
+
+                        <!--Carousel controls - prev item-->
+                        <button
+                            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide="prev">
+                            <span class="inline-block h-8 w-8">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="h-6 w-6">
+                                <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                            </span>
+                            <span
+                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                            >Previous
+                            </span>
+                        </button>
+                        <!--Carousel controls - next item-->
+                        <button
+                            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide="next">
+                            <span class="inline-block h-8 w-8">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="h-6 w-6">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" 
+                                />
+                            </svg>
+                            </span>
+                                <span
+                                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                >Next
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="" id="contact_me">
@@ -149,6 +406,6 @@
             </div>
         </div>
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script> 
-        <script src="../scripts/script.js" defer></script>
+        <script type="module" src="../scripts/script.js" defer></script>
     </body>
 </html>
