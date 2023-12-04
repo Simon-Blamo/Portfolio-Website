@@ -2,10 +2,12 @@ import {
     Carousel,
     Collapse,
     Dropdown,
+    Modal,
+    Ripple,
     initTE,
 } from "../node_modules/tw-elements/dist/js/tw-elements.es.min.js";
 
-initTE({ Collapse, Dropdown, Carousel });
+initTE({ Collapse, Dropdown, Carousel, Ripple, Modal });
 
 const nav = document.getElementById('navbar');
 const home = document.getElementById('homeLink');
