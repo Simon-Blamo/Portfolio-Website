@@ -7086,40 +7086,12 @@ body {
     max-width: 1000px;
   }
 
-  .md\:max-w-\[1440px\] {
-    max-width: 1440px;
+  .md\:max-w-\[1800px\] {
+    max-width: 1800px;
   }
 
   .md\:max-w-\[720px\] {
     max-width: 720px;
-  }
-
-  .md\:max-w-\[150px\] {
-    max-width: 150px;
-  }
-
-  .md\:max-w-\[1500px\] {
-    max-width: 1500px;
-  }
-
-  .md\:max-w-\[1600px\] {
-    max-width: 1600px;
-  }
-
-  .md\:max-w-\[10px\] {
-    max-width: 10px;
-  }
-
-  .md\:max-w-\[120px\] {
-    max-width: 120px;
-  }
-
-  .md\:max-w-\[1700px\] {
-    max-width: 1700px;
-  }
-
-  .md\:max-w-\[1800px\] {
-    max-width: 1800px;
   }
 
   .md\:flex-row {
