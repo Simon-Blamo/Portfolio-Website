@@ -32,39 +32,66 @@ var typed = new Typed('#dynamic', {
 
 
 window.addEventListener('scroll', function(){
-    var scrolled = window.scrollY;
-    if((scrolled > homeHeight) && (scrolled <= (homeHeight + aboutHeight))){
-        home.classList.remove("active")
-        about.classList.add("active")
-        project.classList.remove("active")
-        contact.classList.remove("active")
-    } else if ((scrolled > (homeHeight + aboutHeight)) && (scrolled <= (homeHeight + aboutHeight + (projectHeight - (4.45 * contactHeight))))){
-        home.classList.remove("active")
-        about.classList.remove("active")
-        project.classList.add("active")
-        contact.classList.remove("active")
-    } else if  (scrolled > (homeHeight + aboutHeight + (projectHeight- (4.45 * contactHeight)))){
-        home.classList.remove("active")
-        about.classList.remove("active")
-        project.classList.remove("active")
-        contact.classList.add("active")
+    let windowWidth = window.innerWidth;
+    if(windowWidth > 767){
+        var scrolled = window.scrollY;
+        if((scrolled > homeHeight) && (scrolled <= (homeHeight + aboutHeight))){
+            home.classList.remove("active")
+            about.classList.add("active")
+            project.classList.remove("active")
+            contact.classList.remove("active")
+        } else if ((scrolled > (homeHeight + aboutHeight)) && (scrolled <= (homeHeight + aboutHeight + (projectHeight - (4.45 * contactHeight))))){
+            home.classList.remove("active")
+            about.classList.remove("active")
+            project.classList.add("active")
+            contact.classList.remove("active")
+        } else if  (scrolled > (homeHeight + aboutHeight + (projectHeight- (4.45 * contactHeight)))){
+            home.classList.remove("active")
+            about.classList.remove("active")
+            project.classList.remove("active")
+            contact.classList.add("active")
+        } else {
+            home.classList.add("active")
+            about.classList.remove("active")
+            project.classList.remove("active")
+            contact.classList.remove("active")
+        }
     } else {
-        home.classList.add("active")
-        about.classList.remove("active")
-        project.classList.remove("active")
-        contact.classList.remove("active")
+        var scrolled = window.scrollY;
+        if((scrolled > homeHeight) && (scrolled <= (homeHeight + aboutHeight))){
+            home.classList.remove("active")
+            about.classList.add("active")
+            project.classList.remove("active")
+            contact.classList.remove("active")
+        } else if ((scrolled > (homeHeight + aboutHeight)) && (scrolled <= (homeHeight + aboutHeight + (projectHeight - (contactHeight))))){
+            home.classList.remove("active")
+            about.classList.remove("active")
+            project.classList.add("active")
+            contact.classList.remove("active")
+        } else if  (scrolled > (homeHeight + aboutHeight + (projectHeight- (contactHeight)))){
+            home.classList.remove("active")
+            about.classList.remove("active")
+            project.classList.remove("active")
+            contact.classList.add("active")
+        } else {
+            home.classList.add("active")
+            about.classList.remove("active")
+            project.classList.remove("active")
+            contact.classList.remove("active")
+        }
     }
+    
 });
 
-// window.addEventListener("resize", () => {
-//     const x = document.getElementById("myLinks");
-//     windowWidth = window.innerWidth;
-//     if(window.innerWidth > 1425) {
-//         x.style.display = "inherit";
-//     } else if (window.innerWidth <= 1425) {
-//         x.style.display = "none";
-//     }
-// });
+window.addEventListener("resize", () => {
+    let windowWidth = window.innerWidth;
+    if(window.innerWidth > 767) {
+        homeHeight = document.getElementById('home').offsetHeight;
+        aboutHeight = document.getElementById('about_me').offsetHeight;
+        projectHeight = document.getElementById('projects').offsetHeight;
+        contactHeight = document.getElementById('contact_me').offsetHeight;
+    }
+});
 
 // arrowBtns.forEach(btn => {
 //     btn.addEventListener("click", () => {
