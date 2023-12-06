@@ -1277,10 +1277,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-top: 200px;
 }
 
-.mt-\[40px\] {
-  margin-top: 40px;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -6896,24 +6892,12 @@ body {
     margin-bottom: 0px;
   }
 
-  .md\:mt-\[40px\] {
-    margin-top: 40px;
-  }
-
-  .md\:mt-\[px\] {
-    margin-top: px;
-  }
-
-  .md\:mt-\[5vhpx\] {
-    margin-top: 5vhpx;
+  .md\:mb-\[2vh\] {
+    margin-bottom: 2vh;
   }
 
   .md\:mt-\[5vh\] {
     margin-top: 5vh;
-  }
-
-  .md\:mb-\[2vh\] {
-    margin-bottom: 2vh;
   }
 
   .md\:inline-block {
