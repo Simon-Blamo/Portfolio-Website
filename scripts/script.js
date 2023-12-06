@@ -24,7 +24,8 @@ let windowWidth = window.innerWidth;
 var typed = new Typed('#dynamic', {
     strings: ['Software Engineer.', 'Web Developer.', 'Cyber-Security Specialist.'],
     typeSpeed: 65,
-    backSpeed: 20,
+    backSpeed: 50,
+    backDelay: 1300,
     loop: true,
     loopCount: Infinity,
 });

@@ -35,15 +35,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
-    <body class="bg-[#FFFAFA]">
+    <body class="bg-[#FFFAFA] dark:bg-black">
         <div id="video-wrapper" class="z-0 absolute top-0 left-0 w-[100%] h-[100%] overflow-hidden object-contain opacity-[50%]">
             <video id="theVid" src="../videos/backgroundVid.mp4" class="min-h-full min-w-full absolute bottom-0 left-0 object-cover" autoplay muted loop playsinline></video>
         </div>
         <div id="content" class="">
             <div id="home" class="bg-[#a07433] flex flex-col justify-center items-center">
                 <div id="homeWrapper" class="h-full flex flex-col justify-center items-center z-[2]">
-                    <h1 id="homeIntro" class="text-center leading-[1.4] relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] md:max-w-[1000px]">Hi, my name is Simon Blamo.</h1>
-                    <h1 id="homeIntroLower" class="text-center relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] md:leading-[1.5] md:max-w-[1000px]">I'm an aspiring <span id="dynamic"></span></h1>
+                    <h1 id="homeIntro" class="text-center leading-[1.4] relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] max-w-[255px] md:max-w-[1000px]">Hi, my name is Simon Blamo.</h1>
+                    <h1 id="homeIntroLower" class="text-center relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] md:leading-[1.5] max-w-[260px] md:max-w-[1000px]">I'm an aspiring <span id="dynamic"></span></h1>
                 </div>
             </div>
             <nav
@@ -132,9 +132,6 @@
                                     aria-current="page"
                                     href="#projects"
                                     data-te-nav-link-ref
-                                    data-te-collapse-init
-                                    data-te-collapse-collapsed
-                                    data-te-target="#navbarSupportedContent8"
                                 >
                                     <div class="hidden md:inline-block uppercase">
                                         Projects
@@ -173,11 +170,11 @@
                     </div>
                 </div>
             </nav>
-            <div class="w-[100vw] h-[100vh] flex justify-center items-center" id="about_me">
+            <div class="w-full h-[1100px] md:w-[100vw] md:h-[100vh] flex justify-center items-center" id="about_me">
                 
                 <div class="flex flex-col justify-around h-[80%] max-h-[1075px]">
                     <div class="">
-                        <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000]">About Me</span></h2>
+                        <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000] dark:text-neutral-50 dark:border-neutral-50">About Me</span></h2>
                     </div>
                     <div class="flex justify-center md:justify-center">
                         <div
@@ -187,15 +184,27 @@
                                 src="./images/avatar.png"
                                 alt="" />
                             <div class="flex flex-col justify-around p-6 md:w-[50%] bg-[#FFFFFF] dark:bg-neutral-700 rounded-b-lg">
-                                <h5
-                                    class="mb-2 text-xl font-semibold md:text-5xl text-neutral-800 dark:text-neutral-50 uppercase">Who am I?
-                                    
-                                </h5>
+                                <div class="flex [&>*]:py-4 [&>*]:mr-4">
+                                    <div class="h-full flex items-center">
+                                        <h5
+                                            class="text-2xl font-semibold md:text-5xl text-neutral-800 dark:text-neutral-50 uppercase leading-[0px]">Who am I?
+                                            
+                                        </h5>
+                                    </div>
+                                    <div class="h-full flex items-center">
+                                        <a href="./files/resume (Nov. 2023).pdf" target="_blank">
+                                            <div id="resume" class="bg-[#1B1C1E] text-[#FFFAFA] dark:bg-[#FFFAFA] hover:bg-[#FF7F50] dark:text-[#1B1C1E] max-h-fit uppercase px-4 py-1 text-xl md:text-4xl">
+                                                Resume
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
                                 <p class="mb-4 md:text-2xl text-neutral-600 dark:text-neutral-200">
                                     Hi! My name is Simon Blamo, and I am a student currently working towards my bachelor's degree in Computer Science at the College of New Jersey. I live in the central New Jersey area. I am hoping to shift my future career in the direction of Web Development, and Cyber Security.
                                 </p>
                                 <div id="skills" class="flex flex-col">
-                                    <h6 class="dark:text-white">Known Languages & Technologies</h6>
+                                    <h6 class="dark:text-white font-semibold">Known Languages & Technologies</h6>
                                     <div class="w-full flex flex-wrap">
                                         <img class="h-[36px] md:h-[52px]" src="./images/langIcons/ruby-96.png" alt="Ruby">
                                         <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c-programming-96.png" alt="C">
@@ -224,10 +233,10 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[100vw] h-[100vh] flex justify-center items-center overflow-auto" id="projects">
+            <div class="w-full h-[1100px] md:w-[100vw] md:h-[100vh] flex justify-center items-center overflow-auto py-2 my-5 md:py-0 md:my-0" id="projects">
                 <div class="flex flex-col items-center md:justify-around h-[80%] max-h-[1075px] w-full">
-                    <div class="">
-                        <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000]">Projects</span></h2>
+                    <div class="mb-5 md:md-0">
+                        <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000] dark:text-neutral-50 dark:border-neutral-50">Projects</span></h2>
                     </div>
                     <div id="accordion" class="md:hidden w-[80%]">
                         <!-- First Accordion Item -->
@@ -242,10 +251,12 @@
                                 data-te-target="#flush-collapseOne"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseOne">
-                                Number-to-English / English-to-Number Converter
-                                <a href="https://github.com/Simon-Blamo/Number-English-Converter" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
-                                </a>
+                                <div>
+                                    Number-to-English / English-to-Number Converter
+                                    <a href="https://github.com/Simon-Blamo/Number-English-Converter" target="_blank~">
+                                        <i class="fa-brands fa-github " alt="Check out my Github!"></i>
+                                    </a>
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -269,7 +280,7 @@
                             data-te-collapse-item
                             aria-labelledby="flush-headingOne"
                             data-te-parent="#accordionFlushExample">
-                            <div class="px-5 py-4">
+                            <div class="px-5 py-4 dark:text-neutral-50">
                                 This is a C++ project in Visual Studio that converts numbers to English and English words to numbers. It supports numbers from 0 to 9,223,372,036,854,775,807 with up to five decimal places precision.
                                 <br/>
                                 <br/>
@@ -300,10 +311,12 @@
                                 data-te-target="#flush-collapseTwo"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseTwo">
-                                Solar Panels Data Management System
+                                <div>
+                                    Solar Panels Data Management System
                                 <a href="https://github.com/Simon-Blamo/Spring-2023-CAB" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                    <i class="fa-brands fa-github" alt="Check out my Github!"></i>
                                 </a>
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -327,7 +340,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingTwo"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. 
 
                                     <br/>
@@ -387,10 +400,12 @@
                                 data-te-target="#flush-collapseThree"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseThree">
-                                Portfolio Website
-                                <a href="https://github.com/Simon-Blamo/Portfolio-Website" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
-                                </a>
+                                    <div>
+                                        Portfolio Website
+                                        <a href="https://github.com/Simon-Blamo/Portfolio-Website" target="_blank~">
+                                            <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                        </a>
+                                    </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -414,12 +429,12 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingThree"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
-                                    I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. 
+                                <div class="px-5 py-4 text-neutral-50">
+                                    This portfolio webpage was my 3rd project. Consists of HTML, CSS, and JS. Although it has no backend portion included, it builds upon my the shortcomings of my last project, as I made this webpage responsive.
 
                                     <br/>
                                     <br/>
-                                    <em>Developed Spring '23.</em>
+                                    <em>Developed Summer '23.</em>
                                     <br/>
                                     <br/>
                                     <div class="flex flex-wrap">
@@ -467,10 +482,12 @@
                                 data-te-target="#flush-collapseFour"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseFour">
-                                blamOSH
-                                <a href="https://github.com/Simon-Blamo/blamOSH" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
-                                </a>
+                                    <div>
+                                        blamOSH
+                                        <a href="https://github.com/Simon-Blamo/blamOSH" target="_blank~">
+                                            <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                        </a>
+                                    </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -494,7 +511,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingFour"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     Designed and implemented a command line shell interface to reinforce understanding of child process creation/execution, inter-process communication, etc.<br/><br/>Mimics essential features such as child process execution, command history management ('!!' and arrow keys), input/output redirection, inter-process communication via pipes, working directory management, and dynamic current directory display.
                                     <br/><br/>
                                     <strong>Must be ran on Linux</strong>
@@ -535,10 +552,12 @@
                                 data-te-target="#flush-collapseFive"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseFive">
-                                Amazon Web Scraper
-                                <a href="https://github.com/Simon-Blamo/Amazon-Web-Scraper" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
-                                </a>
+                                <div>
+                                    Amazon Web Scraper
+                                    <a href="https://github.com/Simon-Blamo/Amazon-Web-Scraper" target="_blank~">
+                                        <i class="fa-brands fa-github ml" alt="Check out my Github!"></i>
+                                    </a>
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -562,7 +581,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingFive"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     This Python project aims to check the trustworthiness of Amazon product reviews by examining reviewer profiles and estimating potential bias. Using Selenium for web scraping, the script evaluates the likelihood of biased reviews for a specific product.
                                     <br/>
                                     <br/>
@@ -600,10 +619,12 @@
                                 data-te-target="#flush-collapseSix"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseSix">
-                                Virtual Memory Manager
-                                <a href="https://github.com/Simon-Blamo/Virtual-Memory-Manager" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
-                                </a>
+                                <div>
+                                    Virtual Memory Manager
+                                    <a href="https://github.com/Simon-Blamo/Virtual-Memory-Manager" target="_blank~">
+                                        <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                    </a>
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -627,7 +648,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingSix"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     In this project, I built a Virtual Memory Manager to convert logical addresses into real ones in a virtual space of 65,536 bytes. I used a Translation Lookaside Buffer (TLB) and a page table, dealing with page faults through demand paging. This experience taught me how to handle TLB, implement a page-replacement algorithm, and understand the nuts and bolts of address translation.
                                     <br/>
                                     <br/>
@@ -661,10 +682,12 @@
                                 data-te-target="#flush-collapseSeven"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseSeven">
-                                Web Server
-                                <a href="https://github.com/Simon-Blamo/Multi-threaded-Web-Server" target="_blank~">
-                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
-                                </a>
+                                <div>
+                                    Web Server
+                                    <a href="https://github.com/Simon-Blamo/Multi-threaded-Web-Server" target="_blank~">
+                                        <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                    </a>
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -688,7 +711,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingSeven"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     This project involved building a multi-threaded web server that handles multiple service requests on different ports. The main aim was to develop a functional server capable of processing GET requests, serving static content, and efficiently managing numerous connections at the same time. Through this project, I gained experience in creating a robust server architecture to meet these specific objectives.
                                     <br/>
                                     <br/>
@@ -726,9 +749,11 @@
                                 data-te-target="#flush-collapseEight"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseEight">
-                                blamGPT
+                                <div>
+                                    blamGPT
+                                </div>
                                 <span
-                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    class="-mr-1 ml-auto h-5 w-5 shr>ink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -750,7 +775,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingEight"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     Currently in Development.
                                     <br/>
                                     <br/>
@@ -785,7 +810,9 @@
                                 data-te-target="#flush-collapseNine"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseNine">
-                                ConTinder
+                                <div>
+                                    ConTinder
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -809,7 +836,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingNine"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     Currently in Development.
                                     <br/>
                                     <br/>
@@ -844,7 +871,9 @@
                                 data-te-target="#flush-collapseTen"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseTen">
-                                Weather App
+                                <div>
+                                    Weather App
+                                </div>
                                 <span
                                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                                     <svg
@@ -868,7 +897,7 @@
                                 data-te-collapse-item
                                 aria-labelledby="flush-headingTen"
                                 data-te-parent="#accordionFlushExample">
-                                <div class="px-5 py-4">
+                                <div class="px-5 py-4 text-neutral-50">
                                     Currently in Development.
                                     <br/>
                                     <br/>
@@ -2060,19 +2089,19 @@
                     </div>
                 </div>
             </div>
-            <div class="" id="contact_me">
-                <h1><span>Contact Me</span></h1>
+            <div class="h-[200px] md:h-[30vh] md:max-h-[250px] z-[2] flex flex-col justify-around" id="contact_me">
+                <h1 class="text-center uppercase text-2xl md:text-7xl leading-[0px]"><span class="border-b-2 border-[#000000] dark:text-neutral-50 dark:border-neutral-50">Contact Me</span></h1>
 
-                <div class="linkbar">
-                    <div class="icons">
+                <div id="linkbar">
+                    <div class="flex justify-center items-center text-[#1B1C1E] dark:text-[#FFFAFA]">
                         <a href="mailto:simonblamo.dev@proton.me">
-                            <i class="fa-solid fa-envelope" alt="Email Me!"></i>
+                            <i class="fa-solid fa-envelope mx-[25px] md:text-[7vh] leading-[0px]" alt="Email Me!"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/simon-blamo/" target="_blank">
-                            <i class="fa-brands fa-linkedin" alt="Connect with Me!"></i>
+                            <i class="fa-brands fa-linkedin mx-[25px] md:text-[7vh] leading-[0px]" alt="Connect with Me!"></i>
                         </a>
                         <a href="https://github.com/Simon-Blamo" target="_blank~">
-                            <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                            <i class="fa-brands fa-github mx-[25px] md:text-[7vh] leading-[0px]" alt="Check out my Github!"></i>
                         </a>
                     </div>
                     
