@@ -22,29 +22,7 @@ body {
     font-family: 'Prompt', sans-serif;
 }
 
-
-#video-wrapper{
-    /* z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    object-fit: contain; */
-}
-
-/* #content::before{
-    z-index: 1;
-    content: '';
-    position: absolute;
-    background: rgba(160, 116, 51, 0.42);
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-} */
+/* 
 
 .navContainer{
     z-index: 5;
@@ -82,14 +60,10 @@ body {
 }
 
 .navbar a:hover {
-    color: rgb(255, 179, 80); /*FFB350 */
+    color: rgb(255, 179, 80); FFB350 
 }
 
-#home, #projects {
-    height: 100vh;
-    z-index: 2;
-}
-
+*/
 
 #homeIntro{
     text-shadow: 2px 1px 2px #000;
@@ -112,7 +86,6 @@ body {
 }
 
 #contact_me i:hover {
-    font-size: 9vh;
     color: coral;
 }
 

@@ -40,7 +40,7 @@
             <video id="theVid" src="../videos/backgroundVid.mp4" class="min-h-full min-w-full absolute bottom-0 left-0 object-cover" autoplay muted loop playsinline></video>
         </div>
         <div id="content" class="">
-            <div id="home" class="bg-[#a07433] flex flex-col justify-center items-center">
+            <div id="home" class="bg-[#a07433] h-[100vh] z-[2] flex flex-col justify-center items-center">
                 <div id="homeWrapper" class="h-full flex flex-col justify-center items-center z-[2]">
                     <h1 id="homeIntro" class="text-center leading-[1.4] relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] max-w-[255px] md:max-w-[1000px]">Hi, my name is Simon Blamo.</h1>
                     <h1 id="homeIntroLower" class="text-center relative text-[#FFFAFA] font-semibold text-[32px] lg:text-[50px] md:leading-[1.5] max-w-[260px] md:max-w-[1000px]">I'm an aspiring <span id="dynamic"></span></h1>
@@ -86,10 +86,11 @@
                                 class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                                 data-te-nav-item-ref>
                                 <a
-                                    class="active lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 font-semibold"
+                                    class="active lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-[#FF7F50] font-semibold"
                                     aria-current="page"
                                     href="#home"
                                     data-te-nav-link-ref
+                                    id="homeLink"
                                 >
                                     <div class="hidden md:inline-block uppercase">
                                         Home
@@ -107,10 +108,11 @@
                                 class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                                 data-te-nav-item-ref>
                                 <a
-                                    class=" lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
+                                    class="lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
                                     aria-current="page"
                                     href="#about_me"
                                     data-te-nav-link-ref
+                                    id="aboutLink"
                                 >
                                     <div class="hidden md:inline-block">
                                         About Me
@@ -132,6 +134,7 @@
                                     aria-current="page"
                                     href="#projects"
                                     data-te-nav-link-ref
+                                    id="projectLink"
                                 >
                                     <div class="hidden md:inline-block uppercase">
                                         Projects
@@ -153,6 +156,7 @@
                                     aria-current="page"
                                     href="#contact_me"
                                     data-te-nav-link-ref
+                                    id="contactLink"
                                 >
                                     <div class="hidden md:inline-block uppercase">
                                         Contact Me
@@ -206,26 +210,26 @@
                                 <div id="skills" class="flex flex-col">
                                     <h6 class="dark:text-white font-semibold">Known Languages & Technologies</h6>
                                     <div class="w-full flex flex-wrap">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/ruby-96.png" alt="Ruby">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c-programming-96.png" alt="C">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c++-96.png" alt="C++">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/java-96.png" alt="Java">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/python-96.png" alt="Python">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/html-96.png" alt="HTML">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/css3-96.png" alt="CSS">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/javascript-96.png" alt="Javascript">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/flask-128.png" alt="Flask">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/react-100.png" alt="React">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/icons8-bootstrap-96.png" alt="Bootstrap">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/tailwind-css-96.png" alt="Tailwind CSS">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/mongodb-96.png" alt="MongoDB">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/postgres-96.png" alt="ProstgreSQL">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/r-project-96.png" alt="R-Studio">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/git-96.png" alt="Git">
-                                        <img class="h-[30px] md:h-[52px]" src="./images/langIcons/github-96.png" alt="Github">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/linux-96.png" alt="Linux">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/macos-96.png" alt="MacOS">
-                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/windows-96.png" alt="Windows">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/ruby-96.png" alt="Ruby" title="Ruby">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c-programming-96.png" alt="C" title="C">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/c++-96.png" alt="C++" title="C++">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/java-96.png" alt="Java" title="Java">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/python-96.png" alt="Python" title="Python">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/html-96.png" alt="HTML" title="HTML">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/css3-96.png" alt="CSS" title="CSS">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/javascript-96.png" alt="Javascript" title="Javascript">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/flask-128.png" alt="Flask" title="Flask">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/react-100.png" alt="React" title="React">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/icons8-bootstrap-96.png" alt="Bootstrap" title="Bootstrap">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/tailwind-css-96.png" alt="Tailwind CSS" title="Tailwind CSS">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/mongodb-96.png" alt="MongoDB" title="MongoDB">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/postgres-96.png" alt="ProstgreSQL" title="PostgreSQL">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/r-project-96.png" alt="R-Studio" title="R-Studio">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/git-96.png" alt="Git" title="Git">
+                                        <img class="h-[30px] md:h-[52px]" src="./images/langIcons/github-96.png" alt="Github" title="Github">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/linux-96.png" alt="Linux" title="Linux">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/macos-96.png" alt="MacOS" title="MacOS">
+                                        <img class="h-[36px] md:h-[52px]" src="./images/langIcons/windows-96.png" alt="Windows" title="Windows">
                                     </div>
                                 </div>
                             </div>
@@ -738,6 +742,14 @@
                             </div>
                         </div>
                         <!-- Eighth Accordion Item -->
+                        <div>
+                            
+                        </div>
+                        <!-- Ninth Accordion Item -->
+                        <div>
+
+                        </div>
+                        <!-- Tenth Accordion Item -->
                         <div
                             class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
                             <h2 class="mb-0" id="flush-headingEight">
@@ -798,7 +810,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Ninth Accordion Item -->
+                        <!-- Eleventh Accordion Item -->
                         <div
                             class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
                             <h2 class="mb-0" id="flush-headingNine">
@@ -859,7 +871,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Tenth Accordion Item -->
+                        <!-- Twelfth Accordion Item -->
                         <div
                             class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
                             <h2 class="mb-0" id="flush-headingTen">
@@ -2092,16 +2104,16 @@
             <div class="h-[200px] md:h-[30vh] md:max-h-[250px] z-[2] flex flex-col justify-around" id="contact_me">
                 <h1 class="text-center uppercase text-2xl md:text-7xl leading-[0px]"><span class="border-b-2 border-[#000000] dark:text-neutral-50 dark:border-neutral-50">Contact Me</span></h1>
 
-                <div id="linkbar">
+                <div id="linkbar" class="md:mt-[5vh] md:mb-[2vh]">
                     <div class="flex justify-center items-center text-[#1B1C1E] dark:text-[#FFFAFA]">
                         <a href="mailto:simonblamo.dev@proton.me">
-                            <i class="fa-solid fa-envelope mx-[25px] md:text-[7vh] leading-[0px]" alt="Email Me!"></i>
+                            <i class="fa-solid fa-envelope mx-[25px] text-xl hover:text-3xl md:text-[7vh] md:hover:text-[9vh] leading-[0px]" alt="Email Me!"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/simon-blamo/" target="_blank">
-                            <i class="fa-brands fa-linkedin mx-[25px] md:text-[7vh] leading-[0px]" alt="Connect with Me!"></i>
+                            <i class="fa-brands fa-linkedin mx-[25px] text-xl hover:text-3xl md:text-[7vh] md:hover:text-[9vh] leading-[0px]" alt="Connect with Me!"></i>
                         </a>
                         <a href="https://github.com/Simon-Blamo" target="_blank~">
-                            <i class="fa-brands fa-github mx-[25px] md:text-[7vh] leading-[0px]" alt="Check out my Github!"></i>
+                            <i class="fa-brands fa-github mx-[25px] text-xl hover:text-3xl md:text-[7vh] md:hover:text-[9vh] leading-[0px]" alt="Check out my Github!"></i>
                         </a>
                     </div>
                     

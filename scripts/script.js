@@ -9,17 +9,17 @@ import {
 
 initTE({ Collapse, Dropdown, Carousel, Ripple, Modal });
 
-const nav = document.getElementById('navbar');
 const home = document.getElementById('homeLink');
 const about = document.getElementById('aboutLink');
 const project = document.getElementById('projectLink');
 const contact = document.getElementById('contactLink');
-const carousel = document.querySelector(".carousel");
-const arrowBtns = document.querySelectorAll(".wrapper i");
-const navCon = document.querySelector(".navContainer");
+let homeHeight = document.getElementById('home').offsetHeight;
+let aboutHeight = document.getElementById('about_me').offsetHeight;
+let projectHeight = document.getElementById('projects').offsetHeight;
+let contactHeight = document.getElementById('contact_me').offsetHeight;
 
-let isDragging = false, startX, startScrollLeft;
-let windowWidth = window.innerWidth;
+
+
 
 var typed = new Typed('#dynamic', {
     strings: ['Software Engineer.', 'Web Developer.', 'Cyber-Security Specialist.'],
@@ -30,98 +30,79 @@ var typed = new Typed('#dynamic', {
     loopCount: Infinity,
 });
 
-function myMenu(){
-    const nav = document.getElementById("navbar");
-    const x = document.getElementById("myLinks");
-    const y  = document.querySelector(".icon");
-    if (x.style.display === "none") {
-        nav.style.flexDirection = "column";
-        x.style.display = "block";
-        y.style.position = "absolute";
-    } else {
-        x.style.display = "none";
-        nav.style.flexDirection = "row";
-        y.style.position = "relative";
-    }
-}
-
-function myMenuClose() {
-    const nav = document.getElementById("navbar");
-    const x = document.getElementById("myLinks");
-    const y  = document.querySelector(".icon");
-    if(window.innerWidth <= 1000) {
-        x.style.display = "none";
-        nav.style.flexDirection = "row";
-        y.style.position = "relative";
-    }
-}
 
 window.addEventListener('scroll', function(){
     var scrolled = window.scrollY;
-    if((scrolled >= (window.innerHeight)) && (scrolled < (window.innerHeight*2))){
-        navCon.style.position = "sticky";
-        home.style.color = "#FFFAFA";
-        about.style.color = "coral";
-        project.style.color = "#FFFAFA";
-        contact.style.color = "#FFFAFA";
-    } else if ((scrolled >= (window.innerHeight*2)) && (scrolled < (window.innerHeight*2.25))){
-        navCon.style.position = "sticky";
-        home.style.color = "#FFFAFA";
-        about.style.color = "#FFFAFA";
-        project.style.color = "coral";
-        contact.style.color = "#FFFAFA";
-    } else if  (scrolled >= (window.innerHeight*2.25)){
-        navCon.style.position = "sticky";
-        home.style.color = "#FFFAFA";
-        about.style.color = "#FFFAFA";
-        project.style.color = "#FFFAFA";
-        contact.style.color = "coral"
+    if((scrolled > homeHeight) && (scrolled <= (homeHeight + aboutHeight))){
+        home.classList.remove("active")
+        about.classList.add("active")
+        project.classList.remove("active")
+        contact.classList.remove("active")
+    } else if ((scrolled > (homeHeight + aboutHeight)) && (scrolled <= (homeHeight + aboutHeight + (projectHeight - (4.45 * contactHeight))))){
+        home.classList.remove("active")
+        about.classList.remove("active")
+        project.classList.add("active")
+        contact.classList.remove("active")
+    } else if  (scrolled > (homeHeight + aboutHeight + (projectHeight- (4.45 * contactHeight)))){
+        home.classList.remove("active")
+        about.classList.remove("active")
+        project.classList.remove("active")
+        contact.classList.add("active")
     } else {
-        navCon.style.position = "absolute";
-        home.style.color = "coral";
-        about.style.color = "#FFFAFA";
-        project.style.color = "#FFFAFA";
-        contact.style.color = "#FFFAFA";
+        home.classList.add("active")
+        about.classList.remove("active")
+        project.classList.remove("active")
+        contact.classList.remove("active")
     }
 });
 
-arrowBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id == "left" ? (-windowWidth) : (windowWidth);
-    })
-});
+// window.addEventListener("resize", () => {
+//     const x = document.getElementById("myLinks");
+//     windowWidth = window.innerWidth;
+//     if(window.innerWidth > 1425) {
+//         x.style.display = "inherit";
+//     } else if (window.innerWidth <= 1425) {
+//         x.style.display = "none";
+//     }
+// });
 
-const dragStart = (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging")
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-}
+// arrowBtns.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//         carousel.scrollLeft += btn.id == "left" ? (-windowWidth) : (windowWidth);
+//     })
+// });
 
-const dragStop = (e) => {
-    isDragging = false;
-    carousel.classList.remove("dragging")
-}
+// const dragStart = (e) => {
+//     isDragging = true;
+//     carousel.classList.add("dragging")
+//     startX = e.pageX;
+//     startScrollLeft = carousel.scrollLeft;
+// }
 
-const dragging = (e) => {
-    if (!isDragging) {
-        return;
-    }
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-}
+// const dragStop = (e) => {
+//     isDragging = false;
+//     carousel.classList.remove("dragging")
+// }
 
-window.addEventListener("resize", () => {
-    const x = document.getElementById("myLinks");
-    windowWidth = window.innerWidth;
-    if(window.innerWidth > 1425) {
-        x.style.display = "inherit";
-    } else if (window.innerWidth <= 1425) {
-        x.style.display = "none";
-    }
-});
+// const dragging = (e) => {
+//     if (!isDragging) {
+//         return;
+//     }
+//     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+// }
 
-carousel.addEventListener("mousedown", dragStart);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("mousemove", dragging);
+// window.addEventListener("resize", () => {
+//     const x = document.getElementById("myLinks");
+//     windowWidth = window.innerWidth;
+//     if(window.innerWidth > 1425) {
+//         x.style.display = "inherit";
+//     } else if (window.innerWidth <= 1425) {
+//         x.style.display = "none";
+//     }
+// });
 
-// Initialization for ES Users
+// carousel.addEventListener("mousedown", dragStart);
+// document.addEventListener("mouseup", dragStop);
+// carousel.addEventListener("mousemove", dragging);
+
+// // Initialization for ES Users
