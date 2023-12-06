@@ -47,12 +47,13 @@
                 </div>
             </div>
             <nav
-                class="sticky top-0 flex w-full flex-wrap items-center justify-between bg-[#1B1C1E] py-2 text-[#FFFAFA] shadow-lg dark:bg-neutral-600 lg:py-4 z-[2]" data-te-navbar-ref>
+                class="sticky top-0 flex w-full flex-wrap items-center justify-between bg-[#1B1C1E] py-2 text-[#FFFAFA] shadow-lg dark:bg-neutral-600 lg:py-4 z-[6]" data-te-navbar-ref>
                 <div class="flex w-full flex-wrap items-center justify-between px-3">
                     <button
                         class="block border-0 bg-transparent px-2 text-[#FFFAFA] hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
                         type="button"
                         data-te-collapse-init
+                        data-te-collapse-collapsed
                         data-te-target="#navbarSupportedContent8"
                         aria-controls="navbarSupportedContent8"
                         aria-expanded="false"
@@ -85,11 +86,21 @@
                                 class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                                 data-te-nav-item-ref>
                                 <a
-                                    class="active lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 uppercase font-semibold"
+                                    class="active lg:px-2 [&.active]:text-[#FF7F50] dark:[&.active]:text-neutral-400 font-semibold"
                                     aria-current="page"
                                     href="#home"
                                     data-te-nav-link-ref
-                                >Home
+                                >
+                                    <div class="hidden md:inline-block uppercase">
+                                        Home
+                                    </div>
+                                    <button
+                                        class="uppercase md:hidden"
+                                        data-te-collapse-init
+                                        data-te-collapse-collapsed
+                                        data-te-target="#navbarSupportedContent8">
+                                        Home
+                                    </button>
                                 </a>
                             </li>
                             <li
@@ -100,7 +111,17 @@
                                     aria-current="page"
                                     href="#about_me"
                                     data-te-nav-link-ref
-                                >About Me
+                                >
+                                    <div class="hidden md:inline-block">
+                                        About Me
+                                    </div>
+                                    <button
+                                        class="uppercase md:hidden"
+                                        data-te-collapse-init
+                                        data-te-collapse-collapsed
+                                        data-te-target="#navbarSupportedContent8">
+                                        About Me
+                                    </button> 
                                 </a>
                             </li>
                             <li
@@ -111,7 +132,20 @@
                                     aria-current="page"
                                     href="#projects"
                                     data-te-nav-link-ref
-                                >Projects
+                                    data-te-collapse-init
+                                    data-te-collapse-collapsed
+                                    data-te-target="#navbarSupportedContent8"
+                                >
+                                    <div class="hidden md:inline-block uppercase">
+                                        Projects
+                                    </div>
+                                    <button
+                                        class="uppercase md:hidden"
+                                        data-te-collapse-init
+                                        data-te-collapse-collapsed
+                                        data-te-target="#navbarSupportedContent8">
+                                        Projects
+                                    </button>
                                 </a>
                             </li>
                             <li
@@ -122,7 +156,17 @@
                                     aria-current="page"
                                     href="#contact_me"
                                     data-te-nav-link-ref
-                                >Contact Me
+                                >
+                                    <div class="hidden md:inline-block uppercase">
+                                        Contact Me
+                                    </div>
+                                    <button
+                                        class="uppercase md:hidden"
+                                        data-te-collapse-init
+                                        data-te-collapse-collapsed
+                                        data-te-target="#navbarSupportedContent8">
+                                        Contact Me
+                                    </button>
                                 </a>
                             </li>
                         </ul>
@@ -130,23 +174,14 @@
                 </div>
             </nav>
             <div class="w-[100vw] h-[100vh] flex justify-center items-center" id="about_me">
-                <!-- <h1 class=""><span>About Me</span></h1>
-                <div class="aboutMeCardCon">
-                    <div class="aboutMeCard">
-                        <div id="imgStuff"><img src="../images/avatar.png" alt="Myself"></div>
-                        <div class="aboutMeCardContainer">
-                            <h2><span>Who am I?</span></h2>
-                            <p>I am a student currently working towards my bachelor's degree in Computer Science at the College of New Jersey. I live in the central New Jersey area. I am hoping to shift my future career in the direction of Web Development, and Cyber Security.</p>
-                        </div>
-                    </div>
-                </div> -->
+                
                 <div class="flex flex-col justify-around h-[80%] max-h-[1075px]">
                     <div class="">
                         <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000]">About Me</span></h2>
                     </div>
-                    <div class="flex justify-center md:justify-normal">
+                    <div class="flex justify-center md:justify-center">
                         <div
-                            class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-7xl md:flex-row w-[80%] md:w-full">
+                            class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-7xl md:flex-row w-[80%] md:w-[95%]">
                             <img
                                 class="h-96 md:w-[50%] rounded-t-lg object-cover md:h-auto md:!rounded-none md:!rounded-l-lg"
                                 src="./images/avatar.png"
@@ -157,7 +192,7 @@
                                     
                                 </h5>
                                 <p class="mb-4 md:text-2xl text-neutral-600 dark:text-neutral-200">
-                                    I am a student currently working towards my bachelor's degree in Computer Science at the College of New Jersey. I live in the central New Jersey area. I am hoping to shift my future career in the direction of Web Development, and Cyber Security.
+                                    Hi! My name is Simon Blamo, and I am a student currently working towards my bachelor's degree in Computer Science at the College of New Jersey. I live in the central New Jersey area. I am hoping to shift my future career in the direction of Web Development, and Cyber Security.
                                 </p>
                                 <div id="skills" class="flex flex-col">
                                     <h6 class="dark:text-white">Known Languages & Technologies</h6>
@@ -189,69 +224,682 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="w-[100vw] h-[100vh] flex justify-center items-center" id="projects">
-                <!-- <div class="wrapper">
-                    <i id="left" class="fa-solid fa-angle-left"></i>
-                    <ul class="carousel">
-                        <li class="projectsCard">
-                            <div class="projectImg">
-                                <img src="../images/project1.png" alt="" draggable="false" onclick="location.href='https:\/\/github.com/Simon-Blamo/Number-English-Converter';">
-                            </div>
-                            <div class="projectsInfo">
-                                <h4>Project 1</h4>
-                                <p>This is a C++ project in Visual Studio that converts numbers to English and English words to numbers. It supports numbers from 0 to 9,223,372,036,854,775,807 with up to five decimal places precision.<br><br><b>Developed Fall '22.</b></p>
-                            </div>
-                        </li>
-                        <li class="projectsCard">
-                            <div class="projectImg">
-                                <img src="../images/project2.png" alt="" draggable="false" onclick="location.href='https:\/\/github.com/Simon-Blamo/Spring-2023-CAB';">
-                            </div>
-                            <div class="projectsInfo">
-                                <h4>Project 2</h4>
-                                <p>I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. <br><br><b>Developed Spring '23.</b></p>
-                            </div>
-                        </li>
-                        <li class="projectsCard">
-                            <div class="projectImg">
-                                <img src="../images/project3.png" alt="" draggable="false" onclick="location.href='https:\/\/github.com/Simon-Blamo/Portfolio-Website';">
-                            </div>
-                            <div class="projectsInfo">
-                                <h4>Project 3</h4>
-                                <p>This portfolio webpage was my 3rd project. Consists of HTML, CSS, and JS. Although it has no backend portion included, it builds upon my the shortcomings of my last project, as I made this webpage responsive.<br><br><b>Developed Summer '23.</b></p>
-                            </div>
-                        </li>
-                        <li class="projectsCard">
-                            <div class="projectImg">
-                                <img src="../images/project4-2.png" alt="" draggable="false" onclick="location.href='https:\/\/github.com/Simon-Blamo/blamOSH';">
-                            </div>
-                            <div class="projectsInfo">
-                                <h4>Project 4</h4>
-                                <p>Designed and implemented a command line shell interface to reinforce understanding of child process creation/execution, inter-process communication, etc.<br><br>Mimics essential features such as child process execution, command history management ('!!' and arrow keys), input/output redirection, inter-process communication via pipes, working directory management, and dynamic current directory display. <br><br> <em>Must be ran on Linux.</em> <br><br><b>Developed Fall '23.</b></p>
-                            </div>
-                        </li>
-                        <li class="projectsCard">
-                            <div class="projectImg"><img src="../images/project5-2.png" alt="" draggable="false"></div>
-                            <div class="projectsInfo">
-                                <h4>Project 5</h4>
-                                <p><b>Currently in development.</b></p>
-                            </div>
-                        </li>
-                        <li class="projectsCard">
-                            <div class="projectImg"><img src="../images/project6-3.png" alt="" draggable="false"></div>
-                            <div class="projectsInfo">
-                                <h4>Project 6</h4>
-                                <p><b>Currently in development.</b></p>
-                            </div>
-                        </li>
-                    </ul>
-                    <i id="right" class="fa-solid fa-angle-right"></i>
-                </div> -->
-                <div class="flex flex-col justify-around h-[80%] max-h-[1075px]">
+            <div class="w-[100vw] h-[100vh] flex justify-center items-center overflow-auto" id="projects">
+                <div class="flex flex-col items-center md:justify-around h-[80%] max-h-[1075px] w-full">
                     <div class="">
                         <h2 class="text-center uppercase text-2xl md:text-7xl "><span class="border-b-2 border-[#000000]">Projects</span></h2>
                     </div>
-                    <div class="flex justify-center">
+                    <div id="accordion" class="md:hidden w-[80%]">
+                        <!-- First Accordion Item -->
+                        <div
+                        class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingOne">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseOne"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Number-to-English / English-to-Number Converter
+                                <a href="https://github.com/Simon-Blamo/Number-English-Converter" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                        <div
+                            id="flush-collapseOne"
+                            class="!visible hidden border-0"
+                            data-te-collapse-item
+                            aria-labelledby="flush-headingOne"
+                            data-te-parent="#accordionFlushExample">
+                            <div class="px-5 py-4">
+                                This is a C++ project in Visual Studio that converts numbers to English and English words to numbers. It supports numbers from 0 to 9,223,372,036,854,775,807 with up to five decimal places precision.
+                                <br/>
+                                <br/>
+                                <em>Developed Fall '22.</em>
+                                <br/>
+                                <br/>
+                                <div class="flex flex-wrap">
+                                    <div
+                                        data-te-chip-init
+                                        data-te-ripple-init
+                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                        data-te-close="true">
+                                        C++
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Second Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingTwo">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Solar Panels Data Management System
+                                <a href="https://github.com/Simon-Blamo/Spring-2023-CAB" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseTwo"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingTwo"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. 
+
+                                    <br/>
+                                    <br/>
+                                    <em>Developed Spring '23.</em>
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            HTML
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            CSS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            JS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Flask
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            PostgreSQL
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingThree">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseThree"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Portfolio Website
+                                <a href="https://github.com/Simon-Blamo/Portfolio-Website" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseThree"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingThree"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. 
+
+                                    <br/>
+                                    <br/>
+                                    <em>Developed Spring '23.</em>
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            HTML
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            CSS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Tailwind CSS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            JS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fourth Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingFour">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseFour"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                blamOSH
+                                <a href="https://github.com/Simon-Blamo/blamOSH" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseFour"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingFour"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    Designed and implemented a command line shell interface to reinforce understanding of child process creation/execution, inter-process communication, etc.<br/><br/>Mimics essential features such as child process execution, command history management ('!!' and arrow keys), input/output redirection, inter-process communication via pipes, working directory management, and dynamic current directory display.
+                                    <br/><br/>
+                                    <strong>Must be ran on Linux</strong>
+
+                                    <br/>
+                                    <br/>
+                                    <em>Developed Fall '23.</em>
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            C
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Linux
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fifth Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingFive">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseFive"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Amazon Web Scraper
+                                <a href="https://github.com/Simon-Blamo/Amazon-Web-Scraper" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseFive"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingFive"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    This Python project aims to check the trustworthiness of Amazon product reviews by examining reviewer profiles and estimating potential bias. Using Selenium for web scraping, the script evaluates the likelihood of biased reviews for a specific product.
+                                    <br/>
+                                    <br/>
+                                    <em>Developed Fall '23.</em>
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Python
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Selenium
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sixth Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingSix">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseSix"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                Virtual Memory Manager
+                                <a href="https://github.com/Simon-Blamo/Virtual-Memory-Manager" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseSix"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingSix"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    In this project, I built a Virtual Memory Manager to convert logical addresses into real ones in a virtual space of 65,536 bytes. I used a Translation Lookaside Buffer (TLB) and a page table, dealing with page faults through demand paging. This experience taught me how to handle TLB, implement a page-replacement algorithm, and understand the nuts and bolts of address translation.
+                                    <br/>
+                                    <br/>
+                                    <strong>Must be ran on Linux.</strong>
+                                    <br/>
+                                    <br/>
+                                    <em>Developed Fall '23.</em>
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            C
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Seventh Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingSeven">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseSeven"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                Web Server
+                                <a href="https://github.com/Simon-Blamo/Multi-threaded-Web-Server" target="_blank~">
+                                    <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                </a>
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseSeven"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingSeven"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    This project involved building a multi-threaded web server that handles multiple service requests on different ports. The main aim was to develop a functional server capable of processing GET requests, serving static content, and efficiently managing numerous connections at the same time. Through this project, I gained experience in creating a robust server architecture to meet these specific objectives.
+                                    <br/>
+                                    <br/>
+                                    <em>Developed Fall '23.</em>
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Java
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            HTML
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Eighth Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingEight">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseEight"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                blamGPT
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseEight"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingEight"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    Currently in Development.
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            ReactJS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            OpenAI API
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ninth Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingNine">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseNine"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseNine">
+                                ConTinder
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseNine"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingNine"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    Currently in Development.
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            ReactJS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Tailwind CSS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tenth Accordion Item -->
+                        <div
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                            <h2 class="mb-0" id="flush-headingTen">
+                                <button
+                                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-[#FF7F50] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-[#FFB350] dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] font-bold"
+                                type="button"
+                                data-te-collapse-init
+                                data-te-collapse-collapsed
+                                data-te-target="#flush-collapseTen"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseTen">
+                                Weather App
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="h-6 w-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseTen"
+                                class="!visible hidden border-0"
+                                data-te-collapse-item
+                                aria-labelledby="flush-headingTen"
+                                data-te-parent="#accordionFlushExample">
+                                <div class="px-5 py-4">
+                                    Currently in Development.
+                                    <br/>
+                                    <br/>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            ReactJS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Tailwind CSS
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            OpenWeather API
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex justify-center">
                         <div
                         id="carouselExampleIndicators"
                         class="relative w-[65%] md:max-w-[1800px]"
@@ -299,11 +947,35 @@
                             data-te-slide-to="5"
                             class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
                             aria-label="Slide 6"></button>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="6"
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-label="Slide 7"></button>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="7"
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-label="Slide 8"></button>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="8"
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-label="Slide 9"></button>
+                            <button
+                            type="button"
+                            data-te-target="#carouselExampleIndicators"
+                            data-te-slide-to="9"
+                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                            aria-label="Slide 10"></button>
                         </div>
 
                         <!--Carousel items-->
                         <div
-                            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                            class=" relative w-full overflow-hidden after:clear-both after:block after:content-['']">
                             <!--First item-->
                             <div
                             class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
@@ -319,7 +991,7 @@
                                             data-te-target="#modalCenteredScrollable1"
                                             data-te-ripple-init
                                             data-te-ripple-color="light"
-                                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                                             View More...
                                         </button>
                                     </div>
@@ -344,7 +1016,7 @@
                                             data-te-target="#modalCenteredScrollable2"
                                             data-te-ripple-init
                                             data-te-ripple-color="light"
-                                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                                             View More...
                                         </button>
                                     </div>
@@ -369,7 +1041,7 @@
                                                 data-te-target="#modalCenteredScrollable3"
                                                 data-te-ripple-init
                                                 data-te-ripple-color="light"
-                                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                                class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                                                 View More...
                                             </button>
                                         </div>
@@ -393,13 +1065,13 @@
                                             data-te-target="#modalCenteredScrollable4"
                                             data-te-ripple-init
                                             data-te-ripple-color="light"
-                                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                                             View More...
                                         </button>
                                     </div>
                                 </div>
                                 <img
-                                    src="./images/project4-2.png"
+                                    src="./images/project4.png"
                                     class="block w-full"
                                     alt="" />
                             </div>
@@ -417,13 +1089,13 @@
                                             data-te-target="#modalCenteredScrollable5"
                                             data-te-ripple-init
                                             data-te-ripple-color="light"
-                                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                                             View More...
                                         </button>
                                     </div>
                                 </div>
                                 <img
-                                    src="./images/project5-2.png"
+                                    src="./images/project5.png"
                                     class="block w-full"
                                     alt="" />
                             </div>
@@ -441,13 +1113,109 @@
                                             data-te-target="#modalCenteredScrollable6"
                                             data-te-ripple-init
                                             data-te-ripple-color="light"
-                                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                                             View More...
                                         </button>
                                     </div>
                                 </div>
                                 <img
-                                    src="./images/project6-3.png"
+                                    src="./images/project6.png"
+                                    class="block w-full"
+                                    alt="" />
+                            </div>
+                            <!--Seventh item-->
+                            <div
+                                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                                data-te-carousel-item>
+                                <div class="w-full h-full opacity-0 absolute hover:opacity-100 top-0 left-0">
+                                    <div class="bg-gray-950 opacity-50 w-full h-full content-['']">
+                                    </div>
+                                    <div class="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+                                        <button
+                                            type="button"
+                                            data-te-toggle="modal"
+                                            data-te-target="#modalCenteredScrollable7"
+                                            data-te-ripple-init
+                                            data-te-ripple-color="light"
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            View More...
+                                        </button>
+                                    </div>
+                                </div>
+                                <img
+                                    src="./images/project7.png"
+                                    class="block w-full"
+                                    alt="" />
+                            </div>
+                            <!--Eighth item-->
+                            <div
+                                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                                data-te-carousel-item>
+                                <div class="w-full h-full opacity-0 absolute hover:opacity-100 top-0 left-0">
+                                    <div class="bg-gray-950 opacity-50 w-full h-full content-['']">
+                                    </div>
+                                    <div class="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+                                        <button
+                                            type="button"
+                                            data-te-toggle="modal"
+                                            data-te-target="#modalCenteredScrollable8"
+                                            data-te-ripple-init
+                                            data-te-ripple-color="light"
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            View More...
+                                        </button>
+                                    </div>
+                                </div>
+                                <img
+                                    src="./images/project8.png"
+                                    class="block w-full"
+                                    alt="" />
+                            </div>
+                            <!--Ninth item-->
+                            <div
+                                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                                data-te-carousel-item>
+                                <div class="w-full h-full opacity-0 absolute hover:opacity-100 top-0 left-0">
+                                    <div class="bg-gray-950 opacity-50 w-full h-full content-['']">
+                                    </div>
+                                    <div class="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+                                        <button
+                                            type="button"
+                                            data-te-toggle="modal"
+                                            data-te-target="#modalCenteredScrollable9"
+                                            data-te-ripple-init
+                                            data-te-ripple-color="light"
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            View More...
+                                        </button>
+                                    </div>
+                                </div>
+                                <img
+                                    src="./images/project9.png"
+                                    class="block w-full"
+                                    alt="" />
+                            </div>
+                            <!--Tenth item-->
+                            <div
+                                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                                data-te-carousel-item>
+                                <div class="w-full h-full opacity-0 absolute hover:opacity-100 top-0 left-0">
+                                    <div class="bg-gray-950 opacity-50 w-full h-full content-['']">
+                                    </div>
+                                    <div class="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+                                        <button
+                                            type="button"
+                                            data-te-toggle="modal"
+                                            data-te-target="#modalCenteredScrollable10"
+                                            data-te-ripple-init
+                                            data-te-ripple-color="light"
+                                            class="inline-block rounded bg-[#FF7F50] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#FFB350] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#FFB350] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#FF7F50] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                            View More...
+                                        </button>
+                                    </div>
+                                </div>
+                                <img
+                                    src="./images/project10.png"
                                     class="block w-full"
                                     alt="" />
                             </div>
@@ -506,191 +1274,30 @@
                             </button>
                         </div>
                     </div>
-                    <div
-                        data-te-modal-init
-                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                        id="modalCenteredScrollable1"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalCenteredScrollableLabel"
-                        aria-modal="true"
-                        role="dialog">
+                    <!-- Modals -->
+                    <div>
+                        <!-- First Modal Item -->
                         <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable1"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
                             <div
-                            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-                            <div
-                                class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-                                <!--Modal title-->
-                                <h5
-                                    class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
-                                    id="exampleModalCenteredScrollableLabel">
-                                Number-to-English / English-to-Number Converter 
-                                    <a href="https://github.com/Simon-Blamo/Number-English-Converter" target="_blank~">
-                                        <i class="fa-brands fa-github" alt="Check out my Github!"></i>
-                                    </a>
-                                </h5>
-                                <!--Close button-->
-                                <button
-                                type="button"
-                                class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                                data-te-modal-dismiss
-                                aria-label="Close">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    class="h-6 w-6">
-                                    <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                                </button>
-                            </div>
-
-                            <!--Modal body-->
-                            <div class="relative p-4">
-                                <p>
-                                    This is a C++ project in Visual Studio that converts numbers to English and English words to numbers. It supports numbers from 0 to 9,223,372,036,854,775,807 with up to five decimal places precision.
-
-                                    <br/>
-                                    <br/>
-                                    <em>Developed Fall '22.</em>
-                                </p>
-                                <div class="flex flex-wrap">
-                                    <div
-                                        data-te-chip-init
-                                        data-te-ripple-init
-                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                        data-te-close="true">
-                                        C++
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div
-                        data-te-modal-init
-                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                        id="modalCenteredScrollable2"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalCenteredScrollableLabel"
-                        aria-modal="true"
-                        role="dialog">
-                        <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
-                            <div
-                            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-                            <div
-                                class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-                                <!--Modal title-->
-                                <h5
-                                    class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
-                                    id="exampleModalCenteredScrollableLabel">
-                                    Solar Panels Data Management System
-                                    <a href="https://github.com/Simon-Blamo/Spring-2023-CAB" target="_blank~">
-                                        <i class="fa-brands fa-github" alt="Check out my Github!"></i>
-                                    </a>
-                                </h5>
-                                <!--Close button-->
-                                <button
-                                type="button"
-                                class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                                data-te-modal-dismiss
-                                aria-label="Close">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    class="h-6 w-6">
-                                    <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                                </button>
-                            </div>
-
-                            <!--Modal body-->
-                            <div class="relative p-4">
-                                <p>
-                                    I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. 
-
-                                    <br/>
-                                    <br/>
-                                    <em>Developed Spring '23.</em>
-                                </p>
-                                
-                                <div class="flex flex-wrap">
-                                    <div
-                                        data-te-chip-init
-                                        data-te-ripple-init
-                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                        data-te-close="true">
-                                        HTML
-                                    </div>
-                                    <div
-                                        data-te-chip-init
-                                        data-te-ripple-init
-                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                        data-te-close="true">
-                                        CSS
-                                    </div>
-                                    <div
-                                        data-te-chip-init
-                                        data-te-ripple-init
-                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                        data-te-close="true">
-                                        JS
-                                    </div>
-                                    <div
-                                        data-te-chip-init
-                                        data-te-ripple-init
-                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                        data-te-close="true">
-                                        Flask
-                                    </div>
-                                    <div
-                                        data-te-chip-init
-                                        data-te-ripple-init
-                                        class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                        data-te-close="true">
-                                        PostgreSQL
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div
-                        data-te-modal-init
-                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                        id="modalCenteredScrollable3"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalCenteredScrollableLabel"
-                        aria-modal="true"
-                        role="dialog">
-                        <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
-                            <div
-                            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
                                 <div
                                     class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
                                     <!--Modal title-->
                                     <h5
                                         class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
                                         id="exampleModalCenteredScrollableLabel">
-                                        Portfolio Website
-                                        <a href="https://github.com/Simon-Blamo/Portfolio-Website" target="_blank~">
+                                    Number-to-English / English-to-Number Converter 
+                                        <a href="https://github.com/Simon-Blamo/Number-English-Converter" target="_blank~">
                                             <i class="fa-brands fa-github" alt="Check out my Github!"></i>
                                         </a>
                                     </h5>
@@ -718,11 +1325,79 @@
                                 <!--Modal body-->
                                 <div class="relative p-4">
                                     <p>
-                                        This portfolio webpage was my 3rd project. Consists of HTML, CSS, and JS. Although it has no backend portion included, it builds upon my the shortcomings of my last project, as I made this webpage responsive.
+                                        This is a C++ project in Visual Studio that converts numbers to English and English words to numbers. It supports numbers from 0 to 9,223,372,036,854,775,807 with up to five decimal places precision.
 
                                         <br/>
                                         <br/>
-                                        <em>Developed Summer '23.</em>
+                                        <em>Developed Fall '22.</em>
+                                    </p>
+                                    <div class="flex flex-wrap">
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            C++
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Second Modal Item -->
+                        <div
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable2"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
+                            <div
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                <div
+                                    class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                    <!--Modal title-->
+                                    <h5
+                                        class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                        id="exampleModalCenteredScrollableLabel">
+                                        Solar Panels Data Management System
+                                        <a href="https://github.com/Simon-Blamo/Spring-2023-CAB" target="_blank~">
+                                            <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                        </a>
+                                    </h5>
+                                    <!--Close button-->
+                                    <button
+                                    type="button"
+                                    class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                    data-te-modal-dismiss
+                                    aria-label="Close">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="h-6 w-6">
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                    </button>
+                                </div>
+
+                                <!--Modal body-->
+                                <div class="relative p-4">
+                                    <p>
+                                        I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels. 
+
+                                        <br/>
+                                        <br/>
+                                        <em>Developed Spring '23.</em>
                                     </p>
                                     
                                     <div class="flex flex-wrap">
@@ -745,238 +1420,638 @@
                                             data-te-ripple-init
                                             class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
                                             data-te-close="true">
-                                            Tailwind CSS
-                                        </div>
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
                                             JS
                                         </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            Flask
+                                        </div>
+                                        <div
+                                            data-te-chip-init
+                                            data-te-ripple-init
+                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                            data-te-close="true">
+                                            PostgreSQL
+                                        </div>
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        data-te-modal-init
-                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                        id="modalCenteredScrollable4"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalCenteredScrollableLabel"
-                        aria-modal="true"
-                        role="dialog">
+                        </div>
+                        <!-- Third Modal Item -->
                         <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable3"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
                             <div
-                            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
                                 <div
-                                    class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-                                    <!--Modal title-->
-                                    <h5
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                            class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                            id="exampleModalCenteredScrollableLabel">
+                                            Portfolio Website
+                                            <a href="https://github.com/Simon-Blamo/Portfolio-Website" target="_blank~">
+                                                <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                            </a>
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            This portfolio webpage was my 3rd project. Consists of HTML, CSS, and JS. Although it has no backend portion included, it builds upon my the shortcomings of my last project, as I made this webpage responsive.
+
+                                            <br/>
+                                            <br/>
+                                            <em>Developed Summer '23.</em>
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                HTML
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                CSS
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Tailwind CSS
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                JS
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fourth Modal Item -->
+                        <div
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable4"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
+                            <div
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                            class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                            id="exampleModalCenteredScrollableLabel">
+                                            blamOSH
+                                            <a href="https://github.com/Simon-Blamo/blamOSH" target="_blank~">
+                                                <i class="fa-brands fa-github" alt="Check out my Github!"></i>
+                                            </a>
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            Designed and implemented a command line shell interface to reinforce understanding of child process creation/execution, inter-process communication, etc.<br/><br/>Mimics essential features such as child process execution, command history management ('!!' and arrow keys), input/output redirection, inter-process communication via pipes, working directory management, and dynamic current directory display.
+                                            <br/><br/>
+                                            <strong>Must be ran on Linux</strong>
+
+                                            <br/>
+                                            <br/>
+                                            <em>Developed Fall '23.</em>
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                C
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Linux
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fifth Modal Item -->
+                        <div
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable5"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
+                            <div
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
                                         class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
                                         id="exampleModalCenteredScrollableLabel">
-                                        blamOSH
-                                        <a href="https://github.com/Simon-Blamo/blamOSH" target="_blank~">
+                                        Amazon Web Scraper
+                                        <a href="https://github.com/Simon-Blamo/Amazon-Web-Scraper" target="_blank~">
                                             <i class="fa-brands fa-github" alt="Check out my Github!"></i>
                                         </a>
-                                    </h5>
-                                    <!--Close button-->
-                                    <button
-                                    type="button"
-                                    class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                                    data-te-modal-dismiss
-                                    aria-label="Close">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="h-6 w-6">
-                                        <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                </div>
-
-                                <!--Modal body-->
-                                <div class="relative p-4">
-                                    <p>
-                                        Designed and implemented a command line shell interface to reinforce understanding of child process creation/execution, inter-process communication, etc.<br/><br/>Mimics essential features such as child process execution, command history management ('!!' and arrow keys), input/output redirection, inter-process communication via pipes, working directory management, and dynamic current directory display.
-                                        <br/><br/>
-                                        <strong>Must be ran on Linux</strong>
-
-                                        <br/>
-                                        <br/>
-                                        <em>Developed Fall '23.</em>
-                                    </p>
-                                    
-                                    <div class="flex flex-wrap">
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
-                                            C
-                                        </div>
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
-                                            Linux
-                                        </div>
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
                                     </div>
-                                    
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            This Python project aims to check the trustworthiness of Amazon product reviews by examining reviewer profiles and estimating potential bias. Using Selenium for web scraping, the script evaluates the likelihood of biased reviews for a specific product.
+                                            <br/><br/>
+                                            <em>Developed Fall '23.</em>
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Python
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Selenium
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        data-te-modal-init
-                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                        id="modalCenteredScrollable5"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalCenteredScrollableLabel"
-                        aria-modal="true"
-                        role="dialog">
+                        <!-- Sixth Modal Item -->
                         <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable6"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
                             <div
-                            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
                                 <div
-                                    class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-                                    <!--Modal title-->
-                                    <h5
-                                    class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
-                                    id="exampleModalCenteredScrollableLabel">
-                                    blamGPT
-                                    </h5>
-                                    <!--Close button-->
-                                    <button
-                                    type="button"
-                                    class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                                    data-te-modal-dismiss
-                                    aria-label="Close">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="h-6 w-6">
-                                        <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                </div>
-
-                                <!--Modal body-->
-                                <div class="relative p-4">
-                                    <p>
-                                        Currently in Development.
-
-                                        <br/>
-                                        <br/>
-                                        
-                                    </p>
-                                    
-                                    <div class="flex flex-wrap">
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
-                                            ReactJS
-                                        </div>
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
-                                            OpenAI API
-                                        </div>
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                        class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                        id="exampleModalCenteredScrollableLabel">
+                                        Virtual Memory Manager
+                                        <a href="https://github.com/Simon-Blamo/Virtual-Memory-Manager" target="_blank~">
+                                            <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                        </a>
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
                                     </div>
-                                    
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            In this project, I built a Virtual Memory Manager to convert logical addresses into real ones in a virtual space of 65,536 bytes. I used a Translation Lookaside Buffer (TLB) and a page table, dealing with page faults through demand paging. This experience taught me how to handle TLB, implement a page-replacement algorithm, and understand the nuts and bolts of address translation.
+                                            <br/><br/>
+                                            <em>Developed Fall '23.</em>
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                C
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        data-te-modal-init
-                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                        id="modalCenteredScrollable6"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalCenteredScrollableLabel"
-                        aria-modal="true"
-                        role="dialog">
+                        <!-- Seventh Modal Item -->
                         <div
-                            data-te-modal-dialog-ref
-                            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable7"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
                             <div
-                            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
                                 <div
-                                    class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-                                    <!--Modal title-->
-                                    <h5
-                                    class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
-                                    id="exampleModalCenteredScrollableLabel">
-                                    ConTinder 
-                                    </h5>
-                                    <!--Close button-->
-                                    <button
-                                    type="button"
-                                    class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                                    data-te-modal-dismiss
-                                    aria-label="Close">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="h-6 w-6">
-                                        <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                </div>
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                        class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                        id="exampleModalCenteredScrollableLabel">
+                                        Web Server
+                                        <a href="https://github.com/Simon-Blamo/Multi-threaded-Web-Server" target="_blank~">
+                                            <i class="fa-brands fa-github ml-2" alt="Check out my Github!"></i>
+                                        </a>
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
+                                    </div>
 
-                                <!--Modal body-->
-                                <div class="relative p-4">
-                                    <p>
-                                        Currently in Development.
-
-                                        <br/>
-                                        <br/>
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            This project involved building a multi-threaded web server that handles multiple service requests on different ports. The main aim was to develop a functional server capable of processing GET requests, serving static content, and efficiently managing numerous connections at the same time. Through this project, I gained experience in creating a robust server architecture to meet these specific objectives.
+                                            <br/><br/>
+                                            <em>Developed Fall '23.</em>
+                                        </p>
                                         
-                                    </p>
-                                    
-                                    <div class="flex flex-wrap">
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
-                                            ReactJS
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Java
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                HTML
+                                            </div>
                                         </div>
-                                        <div
-                                            data-te-chip-init
-                                            data-te-ripple-init
-                                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
-                                            data-te-close="true">
-                                            Tailwind CSS
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Eighth Modal Item -->
+                        <div
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable8"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
+                            <div
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                        class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                        id="exampleModalCenteredScrollableLabel">
+                                        blamGPT
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            Currently in Development.
+
+                                            <br/>
+                                            <br/>
+                                            
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                ReactJS
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                OpenAI API
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ninth Modal Item -->
+                        <div
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable9"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
+                            <div
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                        class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                        id="exampleModalCenteredScrollableLabel">
+                                        ConTinder 
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            Currently in Development.
+
+                                            <br/>
+                                            <br/>
+                                            
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                ReactJS
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Tailwind CSS
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tenth Modal Item -->
+                        <div
+                            data-te-modal-init
+                            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                            id="modalCenteredScrollable10"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalCenteredScrollableLabel"
+                            aria-modal="true"
+                            role="dialog">
+                            <div
+                                data-te-modal-dialog-ref
+                                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                                <div
+                                class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                                    <div
+                                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                                        <!--Modal title-->
+                                        <h5
+                                        class="text-xl font-semibold leading-normal text-neutral-800 dark:text-neutral-200"
+                                        id="exampleModalCenteredScrollableLabel">
+                                        Weather App 
+                                        </h5>
+                                        <!--Close button-->
+                                        <button
+                                        type="button"
+                                        class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                        data-te-modal-dismiss
+                                        aria-label="Close">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6">
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Modal body-->
+                                    <div class="relative p-4">
+                                        <p>
+                                            Currently in Development.
+
+                                            <br/>
+                                            <br/>
+                                            
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap">
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                ReactJS
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                Tailwind CSS
+                                            </div>
+                                            <div
+                                                data-te-chip-init
+                                                data-te-ripple-init
+                                                class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200 max-w-fit"
+                                                data-te-close="true">
+                                                OpenWeather API
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
