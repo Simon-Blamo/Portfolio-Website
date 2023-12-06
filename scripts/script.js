@@ -1,13 +1,13 @@
-import {
-    Carousel,
-    Collapse,
-    Dropdown,
-    Modal,
-    Ripple,
-    initTE,
-} from "../node_modules/tw-elements/dist/js/tw-elements.es.min.js";
+// import {
+//     Carousel,
+//     Collapse,
+//     Dropdown,
+//     Modal,
+//     Ripple,
+//     initTE,
+// } from "../node_modules/tw-elements/dist/js/tw-elements.es.min.js";
 
-initTE({ Collapse, Dropdown, Carousel, Ripple, Modal });
+// initTE({ Collapse, Dropdown, Carousel, Ripple, Modal });
 
 const home = document.getElementById('homeLink');
 const about = document.getElementById('aboutLink');
@@ -40,12 +40,12 @@ window.addEventListener('scroll', function(){
             about.classList.add("active")
             project.classList.remove("active")
             contact.classList.remove("active")
-        } else if ((scrolled > (homeHeight + aboutHeight)) && (scrolled <= (homeHeight + aboutHeight + (projectHeight - (4.45 * contactHeight))))){
+        } else if ((scrolled > (homeHeight + aboutHeight)) && (scrolled <= (homeHeight + aboutHeight + (projectHeight - (0.82 * projectHeight))))){
             home.classList.remove("active")
             about.classList.remove("active")
             project.classList.add("active")
             contact.classList.remove("active")
-        } else if  (scrolled > (homeHeight + aboutHeight + (projectHeight- (4.45 * contactHeight)))){
+        } else if  (scrolled > (homeHeight + aboutHeight + (projectHeight- (0.82 * projectHeight)))){
             home.classList.remove("active")
             about.classList.remove("active")
             project.classList.remove("active")

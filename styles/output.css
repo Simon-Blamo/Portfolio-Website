@@ -1127,19 +1127,9 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-bottom: 1rem;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .my-\[5px\] {
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-.my-7 {
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
 }
 
 .-ml-1 {
@@ -1481,10 +1471,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 10px;
 }
 
-.h-\[1100px\] {
-  height: 1100px;
-}
-
 .h-\[120px\] {
   height: 120px;
 }
@@ -1581,6 +1567,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: auto;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .h-full {
   height: 100%;
 }
@@ -1589,13 +1580,12 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 100vh;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .max-h-\[1075px\] {
   max-height: 1075px;
+}
+
+.max-h-\[1100px\] {
+  max-height: 1100px;
 }
 
 .max-h-\[calc\(100\%-64px\)\] {
@@ -1609,10 +1599,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .max-h-full {
   max-height: 100%;
-}
-
-.max-h-\[1100px\] {
-  max-height: 1100px;
 }
 
 .min-h-\[1\.5rem\] {
@@ -1809,26 +1795,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[90\] {
-  width: 90;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[85\%\] {
-  width: 85%;
 }
 
 .min-w-0 {
@@ -3986,6 +3952,16 @@ input[type="range"]:active::-webkit-slider-thumb {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-\[0\.8rem\] {
   font-size: 0.8rem;
 }
@@ -4056,21 +4032,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-black {
@@ -5452,16 +5413,6 @@ body {
 
 .hover\:fill-\[\#8b8b8b\]:hover {
   fill: #8b8b8b;
-}
-
-.hover\:text-3xl:hover {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.hover\:text-4xl:hover {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .hover\:text-7xl:hover {
@@ -6991,6 +6942,10 @@ body {
     max-height: 250px;
   }
 
+  .md\:max-h-none {
+    max-height: none;
+  }
+
   .md\:w-\[100vw\] {
     width: 100vw;
   }
@@ -7284,15 +7239,6 @@ body {
   .dark\:\[\&\.active\]\:text-\[\#FF7F50\].active {
     --tw-text-opacity: 1;
     color: rgb(255 127 80 / var(--tw-text-opacity));
-  }
-
-  .dark\:\[\&\.active\]\:text-neutral-400.active {
-    --tw-text-opacity: 1;
-    color: rgb(163 163 163 / var(--tw-text-opacity));
-  }
-
-  .dark\:\[\&\.active\]\:text-\[\].active {
-    color: ;
   }
 }
 
