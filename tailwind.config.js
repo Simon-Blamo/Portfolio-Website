@@ -5,7 +5,13 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'wide': {
+          'raw': `only screen and (max-height: 480px) and (max-width: 960px)`
+        }
+      }
+    },
   },
   plugins: [require("tw-elements/dist/plugin")],
 }
