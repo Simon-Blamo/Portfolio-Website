@@ -1272,10 +1272,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-top: 200px;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -1459,10 +1455,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 1.125rem;
 }
 
-.h-\[100\%\] {
-  height: 100%;
-}
-
 .h-\[100px\] {
   height: 100px;
 }
@@ -1584,29 +1576,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 100vh;
 }
 
-<<<<<<< HEAD
-=======
-.h-\[\] {
-  height: ;
-}
-
-.h-\[110\%\] {
-  height: 110%;
-}
-
-.h-\[1\%\] {
-  height: 1%;
-}
-
-.h-\[105\%\] {
-  height: 105%;
-}
-
-.h-\[100lvh\] {
-  height: 100lvh;
-}
-
->>>>>>> bcf1b69a (update)
 .max-h-\[1075px\] {
   max-height: 1075px;
 }
@@ -1824,17 +1793,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   width: 100vw;
 }
 
-<<<<<<< HEAD
-=======
-.w-\[\] {
-  width: ;
-}
-
-.w-\[S\] {
-  width: S;
-}
-
->>>>>>> bcf1b69a (update)
 .min-w-0 {
   min-width: 0px;
 }
@@ -4456,6 +4414,23 @@ input[type="range"]:active::-webkit-slider-thumb {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#\!B\] {
+  color: #!B;
+}
+
+.text-\[\#1B\] {
+  color: #1B;
+}
+
+.text-\[\#1BC\] {
+  --tw-text-opacity: 1;
+  color: rgb(17 187 204 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -6964,6 +6939,10 @@ body {
     display: none;
   }
 
+  .md\:h-\[100\%\] {
+    height: 100%;
+  }
+
   .md\:h-\[100vh\] {
     height: 100vh;
   }
@@ -6978,10 +6957,6 @@ body {
 
   .md\:h-auto {
     height: auto;
-  }
-
-  .md\:h-\[100\%\] {
-    height: 100%;
   }
 
   .md\:max-h-\[250px\] {
@@ -7002,10 +6977,6 @@ body {
 
   .md\:w-\[95\%\] {
     width: 95%;
-  }
-
-  .md\:w-\[100\%\] {
-    width: 100%;
   }
 
   .md\:max-w-7xl {
@@ -7425,15 +7396,6 @@ body {
 
 .\[\&\>\*\]\:mr-4>* {
   margin-right: 1rem;
-}
-
-.\[\&\>\*\]\:\[\&\>\*\]\:mr-4>*>* {
-  margin-right: 1rem;
-}
-
-.\[\&\>\*\]\:py-4>* {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .\[\&\>svg\]\:pointer-events-none>svg {
