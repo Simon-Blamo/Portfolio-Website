@@ -1272,6 +1272,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-top: 200px;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2659,6 +2663,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-y-3 {
+  row-gap: 0.75rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -7370,6 +7378,10 @@ body {
 }
 
 .\[\&\>\*\]\:mr-4>* {
+  margin-right: 1rem;
+}
+
+.\[\&\>\*\]\:\[\&\>\*\]\:mr-4>*>* {
   margin-right: 1rem;
 }
 
