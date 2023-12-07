@@ -1132,6 +1132,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-bottom: 5px;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .-ml-1 {
   margin-left: -0.25rem;
 }
@@ -3815,6 +3820,16 @@ input[type="range"]:active::-webkit-slider-thumb {
   padding-bottom: 5px;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -4412,23 +4427,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
-}
-
-.text-\[\#\!B\] {
-  color: #!B;
-}
-
-.text-\[\#1B\] {
-  color: #1B;
-}
-
-.text-\[\#1BC\] {
-  --tw-text-opacity: 1;
-  color: rgb(17 187 204 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -6913,6 +6911,11 @@ body {
   .md\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .md\:my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .md\:mb-0 {
