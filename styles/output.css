@@ -7054,24 +7054,17 @@ body {
     line-height: 1;
   }
 
-  .md\:text-\[24px\] {
-    font-size: 24px;
-  }
-
   .md\:text-\[7vh\] {
     font-size: 7vh;
   }
 
-  .md\:text-\[22px\] {
-    font-size: 22px;
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
-  .md\:text-\[20px\] {
-    font-size: 20px;
-  }
-
-  .md\:text-\[21px\] {
-    font-size: 21px;
+  .md\:font-semibold {
+    font-weight: 600;
   }
 
   .md\:leading-\[1\.5\] {
