@@ -14,7 +14,7 @@
     <meta name="author" content="Simon Blamo" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="rating" content="safe for kids" />
-    <meta name="revised" content="Tuesday, December 5nd, 2023, 10:36 PM" />
+    <meta name="revised" content="Friday, January 12th, 2023, 10:36 PM" />
 
     <!-- Open Graph Protocol -->
     <!-- If you wish to share this webpage on social media, uncomment this HTML Section, and update the content attributes -->
@@ -70,7 +70,7 @@
       ></video>
     </div>
     <div id="content" class="">
-      <div
+      <section
         id="home"
         class="bg-[#a07433] h-[100vh] z-[2] flex flex-col justify-center items-center md:overflow-y-scroll"
       >
@@ -91,7 +91,7 @@
             I'm an aspiring <span id="dynamic"></span>
           </h1>
         </div>
-      </div>
+      </section>
       <nav
         class="sticky top-0 flex w-full flex-wrap items-center justify-between bg-[#1B1C1E] py-2 text-[#FFFAFA] shadow-lg dark:bg-neutral-600 lg:py-4 z-[6]"
         data-te-navbar-ref
@@ -157,6 +157,8 @@
                   </button>
                 </a>
               </li>
+              
+              <!-- About Me link -->
               <li
                 class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
@@ -179,6 +181,8 @@
                   </button>
                 </a>
               </li>
+              
+              <!-- Projects link -->
               <li
                 class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
@@ -201,6 +205,8 @@
                   </button>
                 </a>
               </li>
+              
+              <!-- Contact Me Section -->
               <li
                 class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
@@ -227,7 +233,7 @@
           </div>
         </div>
       </nav>
-      <div
+      <section
         class="w-full h-fit max-h-[1100px] md:max-h-none md:w-[100vw] md:h-[100vh] flex justify-center items-center py-2 my-10 md:py-0 md:overflow-y-scroll"
         id="about_me"
       >
@@ -417,8 +423,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         class="w-full h-fit max-h-[1100px] md:max-h-none md:w-[100vw] md:h-[100vh] flex justify-center items-center py-2 my-10 md:py-0 md:overflow-y-scroll"
         id="projects"
       >
@@ -3239,43 +3245,54 @@
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="h-[200px] md:h-[30vh] md:max-h-[250px] z-[2] flex flex-col justify-around md:overflow-y-scroll"
+      </section>
+      <section
+        class="h-[200px] md:h-[30vh] md:max-h-[250px] z-[2] flex flex-col justify-around"
         id="contact_me"
       >
-        <h1 class="text-center uppercase text-4xl md:text-7xl leading-[0px]">
+        <h1 class="text-center uppercase text-4xl md:text-7xl leading-[0px] ">
           <span
             class="border-b-2 border-[#000000] dark:text-neutral-50 dark:border-neutral-50"
             >Contact Me</span
           >
         </h1>
 
-        <div id="linkbar" class="md:mt-[5vh] md:mb-[2vh]">
+        <div id="linkbar" class="md:mt-[4vh] md:mb-[2vh]">
           <div
             class="flex justify-center items-center text-[#1B1C1E] dark:text-[#FFFAFA]"
           >
             <a href="mailto:simonblamo.dev@proton.me">
               <i
-                class="fa-solid fa-envelope mx-[25px] text-6xl hover:text-7xl md:text-[7vh] md:hover:text-[9vh] leading-[0px]"
+                class="fa-solid fa-envelope mx-[25px] text-[54px] hover:text-6xl md:text-[6vh] md:hover:text-[8vh] leading-[0px] overflow-auto"
                 alt="Email Me!"
               ></i>
             </a>
             <a href="https://www.linkedin.com/in/simon-blamo/" target="_blank">
               <i
-                class="fa-brands fa-linkedin mx-[25px] text-6xl hover:text-7xl md:text-[7vh] md:hover:text-[9vh] leading-[0px]"
+                class="fa-brands fa-linkedin mx-[25px] text-[54px] hover:text-6xl md:text-[6vh] md:hover:text-[8vh] leading-[0px]"
                 alt="Connect with Me!"
               ></i>
             </a>
             <a href="https://github.com/Simon-Blamo" target="_blank~">
               <i
-                class="fa-brands fa-github mx-[25px] text-6xl hover:text-7xl md:text-[7vh] md:hover:text-[9vh] leading-[0px]"
+                class="fa-brands fa-github mx-[25px] text-[54px] hover:text-6xl md:text-[6vh] md:hover:text-[8vh] leading-[0px]"
                 alt="Check out my Github!"
               ></i>
             </a>
           </div>
         </div>
-      </div>
+      </section>
+      <footer id="footer" class="my-2 w-full">
+        <section class="w-full">
+          <p class="font-semibold text-[#1B1C1E] dark:text-[#FFFAFA] max-w-fit m-auto">Copyright © 2024 
+            <span class="text-[#FF7F50]">
+              <a href="#home">
+                Simon Blamo
+              </a>
+            </span>
+          </p>
+        </section>
+      </footer>
     </div>
     <script
       src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"
