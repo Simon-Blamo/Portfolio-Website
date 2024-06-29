@@ -1,13 +1,4 @@
-// import {
-//     Carousel,
-//     Collapse,
-//     Dropdown,
-//     Modal,
-//     Ripple,
-//     initTE,
-// } from "../node_modules/tw-elements/dist/js/tw-elements.es.min.js";
 
-// initTE({ Collapse, Dropdown, Carousel, Ripple, Modal });
 
 const home = document.getElementById('homeLink');
 const about = document.getElementById('aboutLink');
@@ -22,7 +13,7 @@ let contactHeight = document.getElementById('contact_me').offsetHeight;
 
 
 var typed = new Typed('#dynamic', {
-    strings: ['Software Engineer.', 'Web Developer.', 'Cyber-Security Specialist.'],
+    strings: ['Software Engineer.', 'Cloud Engineer', 'BlockChain Engineer', 'ML Engineer'],
     typeSpeed: 65,
     backSpeed: 50,
     backDelay: 1300,
