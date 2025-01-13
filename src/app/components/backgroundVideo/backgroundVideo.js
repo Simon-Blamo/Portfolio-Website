@@ -13,12 +13,12 @@ export default function BackgroundVideo() {
     const vidStyles = {
         position: "fixed",
         top: "0",
-        left: "0",
+        left: "-150px",
         background: "no-repeat center",
         userSelect: "none",
         pointerEvents: "none",
         height: "100%",
-        width: "177.77777778vh",
+        width: "227.77777778vh",
         minHeight: "56.25vw",
         minWidth: "100%",
         objectFit: "cover",
@@ -33,9 +33,9 @@ export default function BackgroundVideo() {
         left: "0",
         top: "0",
         background: "#000",
-        zIndex: "3", // Ensure placeholder is above the video until hidden
-        transition: "opacity 0.5s ease", // Smooth fade-out
-        opacity: showPlaceholder ? 1 : 0 // Fade out based on state
+        zIndex: "3",
+        transition: "opacity 0.5s ease", 
+        opacity: showPlaceholder ? 1 : 0 
     };
 
     const handleIframeLoad = () => {
