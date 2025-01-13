@@ -40,13 +40,13 @@ export default function AboutPage() {
                     <p
                         className='md:text-xl md:font-semibold grow-0 mb-4'
                     >
-                        Hi! My name is Simon Blamo. I'm an avid fan of Boxing/MMA, and
+                        Hi! My name is Simon Blamo. I&#39;m an avid fan of Boxing/MMA, and
                         DC/Marvel! In my free time, I enjoy practicing the guitar,
                         collecting vinyls, and working out. <br /><br />
 
-                        I am a college graudate, receiving my Bachelor's of Science in Computer Science at the College of New Jersey. <br /><br />
+                        I am a college graudate, receiving my Bachelor&#39;s of Science in Computer Science at the College of New Jersey. <br /><br />
 
-                        I've nearly had a year of professional experience so far. I'm a life-long learner who love to make innovative solutions!
+                        I&#39;ve nearly had a year of professional experience so far. I&#39;m a life-long learner who love to make innovative solutions!
                     </p>
                     <div
                         className='flex flex-col'
