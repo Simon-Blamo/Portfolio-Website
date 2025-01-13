@@ -18,7 +18,7 @@ export default function BackgroundVideo() {
         userSelect: "none",
         pointerEvents: "none",
         height: "100%",
-        width: "227.77777778vh",
+        width: "267.77777778vh",
         minHeight: "56.25vw",
         minWidth: "100%",
         objectFit: "cover",
