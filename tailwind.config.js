@@ -1,18 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: [
-    "./**/*.{html,js}",
-    "./node_modules/tw-elements/dist/js/**/*.js"
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      screens: {
-        'wide': {
-          'raw': `only screen and (max-height: 480px) and (max-width: 960px)`
-        }
-      }
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
     },
   },
-  plugins: [require("tw-elements/dist/plugin")],
-}
-
+  plugins: [
+    require('daisyui'),
+  ],
+});

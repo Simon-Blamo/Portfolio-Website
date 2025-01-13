@@ -1,8 +1,38 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.3.5"
+  "name": "portfolio-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "tw-elements": "^1.0.0"
+    "@formspree/react": "^2.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@material-tailwind/react": "^2.1.10",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
+    "next": "^15.1.4",
+    "pdfjs-dist": "^3.4.120",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-pdf": "^9.1.1",
+    "sass": "^1.80.3",
+    "tw-elements": "^2.0.0",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.13",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   }
 }

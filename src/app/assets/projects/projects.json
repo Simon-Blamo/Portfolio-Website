@@ -1,0 +1,157 @@
+[
+    {
+        "title": "Number-to-English / English-to-Number Converter",
+        "image": "/projects/images/project1.png",
+        "github": "https://github.com/Simon-Blamo/Number-English-Converter",
+        "description": "This is a C++ project in Visual Studio that converts numbers to English and English words to numbers. It supports numbers from 0 to 9,223,372,036,854,775,807 with up to five decimal places precision.",
+        "timeFrame": "Developed Fall '22",
+        "languages": [
+            "C++"
+        ]
+    },
+    {
+        "title": "Solar Panels Data Management System",
+        "image": "/projects/images/project2.png",
+        "github": "https://github.com/Simon-Blamo/Spring-2023-CAB",
+        "description": "I coded this full-stack project after my peers designed the database schema. It encompasses HTML, CSS, JS, SQL, and is served by the Flask framework. The project focuses on providing a database that facilitates querying various questions related to solar panels in New Jersey. For instance, you can select Bergen County as the Municipality and choose the desired Customer Type to determine which customer category exhibits the highest usage of solar panels.",
+        "timeFrame": "Developed Spring '23",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Flask",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "title": "Portfolio Website",
+        "image": "/projects/images/project3.png",
+        "github": "https://github.com/Simon-Blamo/Portfolio-Website",
+        "description": "This counts right?",
+        "timeFrame": "Developed Summer '23, Revamped Winter '25",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Tailwind",
+            "SCSS",
+            "React.JS",
+            "Next.JS"
+        ]
+    },
+    {
+        "title": "blamOSH",
+        "image": "/projects/images/project4.png",
+        "github": "https://github.com/Simon-Blamo/blamOSH",
+        "description": "Designed and implemented a command line shell interface to reinforce understanding of child process creation/execution, inter-process communication, etc.\nMimics essential features such as child process execution, command history management ('!!' and arrow keys), input/output redirection, inter-process communication via pipes, working directory management, and dynamic current directory display.\n\nMust be ran on Linux.",
+        "timeFrame": "Developed Fall '23",
+        "languages": [
+            "C",
+            "Linux"
+        ]
+    },
+    {
+        "title": "Amazon Web Scraper",
+        "image": "/projects/images/project5.png",
+        "github": "https://github.com/Simon-Blamo/Amazon-Web-Scraper",
+        "description": "This Python project aims to check the trustworthiness of Amazon product reviews by examining reviewer profiles and estimating potential bias. Using Selenium for web scraping, the script evaluates the likelihood of biased reviews for a specific product.",
+        "timeFrame": "Developed Fall '23",
+        "languages": [
+            "Python",
+            "Selenium"
+        ]
+    },
+    {
+        "title": "Virtual Memory Manager",
+        "image": "/projects/images/project6.png",
+        "github": "https://github.com/Simon-Blamo/Virtual-Memory-Manager",
+        "description": "In this project, I built a Virtual Memory Manager to convert logical addresses into real ones in a virtual space of 65,536 bytes. I used a Translation Lookaside Buffer (TLB) and a page table, dealing with page faults through demand paging. This experience taught me how to handle TLB, implement a page-replacement algorithm, and understand the nuts and bolts of address translation.",
+        "timeFrame": "Developed Fall '23",
+        "languages": [
+            "C",
+            "Linux"
+        ]
+    },
+    {
+        "title": "Web Server",
+        "image": "/projects/images/project7.png",
+        "github": "https://github.com/Simon-Blamo/Multi-threaded-Web-Server",
+        "description": "This project involved building a multi-threaded web server that handles multiple service requests on different ports. The main aim was to develop a functional server capable of processing GET requests, serving static content, and efficiently managing numerous connections at the same time. Through this project, I gained experience in creating a robust server architecture to meet these specific objectives.",
+        "timeFrame": "Developed Fall '23",
+        "languages": [
+            "Java",
+            "HTML"
+        ]
+    },
+    {
+        "title": "Digit.ALL Website",
+        "image": "/projects/images/project8.png",
+        "github": "https://github.com/TCNJDIGITall/TCNJDIGITall.github.io",
+        "description": "I took on the task of rebuilding the university organization's club website entirely using HTML, Tailwind CSS, and JS. Managed and updated the webpage throughout my academic tenure, ensuring it reflected announcements and maintained the club's mailing list.",
+        "timeFrame": "Developed Fall '23",
+        "languages": [
+            "HTML",
+            "CSS",
+            "Tailwind",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Hackathons with Awesome Logistics Organization (HALO)",
+        "image": "/projects/images/project9.png",
+        "github": "https://github.com/tcnj-acm/halo",
+        "description": "Managed and enhanced a Django application designed to streamline hackathon operations at TCNJ for the organization hackTCNJ. The application handled various functions, including registration, participant management, and organizer tasks, benefiting over 200 users during hackathon events.",
+        "timeFrame": "Contributed to Fall '23 - Spring '24",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Heroku",
+            "AWS"
+        ]
+    },
+    {
+        "title": "Protestify",
+        "image": "/projects/images/project10.png",
+        "github": "https://github.com/Simon-Blamo/Protestify",
+        "description": "Protestify is a full-stack web application developed using Ruby on Rails. It provides a platform for users to organize and promote rallies, engage with other activists, and participate in community events.",
+        "timeFrame": "Developed Spring '23",
+        "languages": [
+            "Ruby",
+            "Ruby on Rails",
+            "JavaScript",
+            "TypeScript",
+            "Angular",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "title": "Accessible Hangman",
+        "image": "/projects/images/project11.png",
+        "github": "https://github.com/Simon-Blamo/accessible-hangman",
+        "description": "A modern spin on the traditional children's game.",
+        "timeFrame": "Developed Fall '24",
+        "languages": [
+            "Python",
+            "PyQt6",
+            "NLTK"
+        ]
+    },
+    {
+        "title": "Sukhino",
+        "image": "/projects/images/project12.png",
+        "github": null,
+        "description": "Fullstack App that acts a fitness & wellbeing assistant. I am responsible to integrating the LLM component of the software system",
+        "timeFrame": "Contributed to Winter '25 - Ongoing",
+        "languages": [
+            "Python",
+            "Django",
+            "Google Cloud",
+            "LLM (AI)"
+        ]
+    }
+]
