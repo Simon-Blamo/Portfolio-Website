@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Avatar from '../assets/avatar.png'
 import SkillsBar from '../components/skillsBar'
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function AboutPage() { 
     return (
-        <div className="card md:card-side md:max-w-7xl max-h-[650px] md:max-h-[675px] bg-base-100 shadow-xl md:mt-6">
+        <div className="card md:card-side md:max-w-7xl max-h-[550px] md:max-h-[675px] bg-base-100 shadow-xl md:mt-6">
             <figure
                 className='md:w-[50%] md:max-w-[1075px] md:min-h-full'
             >
@@ -19,7 +19,7 @@ export default function AboutPage() {
                     className='md:min-h-full md:min-w-full'
                 />
             </figure>
-            <div className='card-body md:w-[50%] max-h-[400px] md:max-h-[1075px] flex justify-center justify-items-center'>
+            <div className='card-body md:w-[50%] max-h-[350px] md:max-h-[1075px] flex justify-center justify-items-center'>
                 <div className="h-[90%] overflow-y-auto flex flex-col justify-between">
                     <div className='flex flex-wrap mb-3'>
                         <h2 className="card-title uppercase mr-2 text-2xl">Who am I?</h2>
@@ -28,12 +28,11 @@ export default function AboutPage() {
                                 <button className="btn btn-primary uppercase text-lg md:text-xl">Resume</button>
                             </Link>
                         </div>
-                        
-                        <a href='https://github.com/Simon-Blamo' className='text-white mx-2 text-4xl md:text-5xl flex items-center'>
-                            <FontAwesomeIcon icon={faGithub}/>
+                        <a href='https://github.com/Simon-Blamo' className='text-white mx-2 text-4xl md:text-5xl flex items-center md:w-[48px]'>
+                            <FontAwesomeIcon icon={faGithub} />
                         </a>
-                        <a href='https://www.linkedin.com/in/simon-blamo/' className='text-white ml-2 text-4xl md:text-5xl flex items-center'>
-                            <FontAwesomeIcon icon={faLinkedin} />
+                        <a href='https://www.linkedin.com/in/simon-blamo/' className='text-white ml-2 text-4xl md:text-5xl flex items-center w-[36px] md:w-[48px]'>
+                            <FontAwesomeIcon icon={faLinkedin}/>
                         </a>
                     </div>
 

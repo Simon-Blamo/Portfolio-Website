@@ -8,7 +8,7 @@ import Typing from './typing';
 export default function Chat() {
 
     const parentRef = useRef(null);
-    const [childStyle, setChildStyle] = useState({}); // Dynamic style for the child div
+    const [childStyle, setChildStyle] = useState({});
 
     useEffect(() => {
         const parentElement = parentRef.current;
@@ -20,12 +20,10 @@ export default function Chat() {
             const height = parentElement.offsetHeight;
 
             if (window.matchMedia('(min-width: 720px)').matches) {
-                // After md breakpoint: Swap width and height
                 setChildStyle({
                     width:  `${(height * 0.95)}px`,
                 });
             } else {
-                // Reset for small screens
                 setChildStyle({
                     width: '100%',
                 });
@@ -39,6 +37,7 @@ export default function Chat() {
 
         return () => resizeObserver.disconnect();
     }, []);
+
 
     const [time, setTime] = useState('');
     const [mounted, setMounted] = useState(false);
@@ -75,7 +74,7 @@ export default function Chat() {
                 </div>
                 <div className="chat-header text-black">
                     Simon Blamo
-                    <time className="text-xs opacity-50 text-black">{" " + time}</time>
+                    <time className="text-xs opacity-50 text-black" suppressHydrationWarning={true}>{" " + time}</time>
                 </div>
                 <div className="chat-bubble chat-bubble-info text-white text-sm md:text-md">
                     <div className='mb-1'></div>
