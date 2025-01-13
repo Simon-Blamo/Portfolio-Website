@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { FormspreeProvider } from '@formspree/react';
 import ContactForm from './contactForm';
+import Typing from './typing';
+
 export default function Chat() {
 
     const parentRef = useRef(null);
@@ -33,18 +35,26 @@ export default function Chat() {
         const resizeObserver = new ResizeObserver(handleResize);
         resizeObserver.observe(parentElement);
 
-        // Initial call to set the styles
         handleResize();
 
-        // Cleanup the observer on component unmount
         return () => resizeObserver.disconnect();
     }, []);
 
     const [time, setTime] = useState('');
     const [mounted, setMounted] = useState(false);
 
+    const [showAnimation, setShowAnimation] = useState(true);
+
     useEffect(() => {
-        setMounted(true); // Ensure the component has mounted on the client side
+        const timer = setTimeout(() => {
+            setShowAnimation(false);
+        }, 3000); // 2 seconds
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        setMounted(true);
         const now = new Date();
         const hours = now.getHours();
         const minutes = now.getMinutes();
@@ -68,12 +78,8 @@ export default function Chat() {
                     <time className="text-xs opacity-50 text-black">{" " + time}</time>
                 </div>
                 <div className="chat-bubble chat-bubble-info text-white text-sm md:text-md">
-                    <div className='mb-1'>
-
-                    </div>
-                    <p>
-                        All ears!
-                    </p>
+                    <div className='mb-1'></div>
+                    { showAnimation ? <Typing/> : <p>Hey, I&#39;m all ears!</p> }
                 </div>
             </div>
             <div>
