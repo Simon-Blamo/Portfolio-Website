@@ -5,11 +5,6 @@ import CarouselComp from "../components/carouselComp"
 import AccordionComp  from "../components/accordionComp";
 
 export default function ProjectsPage() { 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            require("tw-elements");
-        }
-    }, []);
 
     return (
         <div className="md:max-w-7xl overflow-hidden">

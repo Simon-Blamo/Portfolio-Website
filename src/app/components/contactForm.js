@@ -4,11 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactForm({ style }) {
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            require("tw-elements");
-        }
-    }, []);
+
     const [state, handleSubmit] = useForm("contact");
     const [status, setStatus] = useState('');
     const [formData, setFormData] = useState({

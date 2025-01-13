@@ -5,13 +5,6 @@ import { FormspreeProvider } from '@formspree/react';
 import ContactForm from './contactForm';
 export default function Chat() {
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            require("tw-elements");
-        }
-    }, []);
-    
-
     const parentRef = useRef(null);
     const [childStyle, setChildStyle] = useState({}); // Dynamic style for the child div
 

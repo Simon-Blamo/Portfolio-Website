@@ -19,12 +19,6 @@ const geistMono = localFont({
 });
 
 export default function RootLayout({ children }) {
-
-  useEffect(() => {
-          if (typeof window !== "undefined") {
-              require("tw-elements");
-          }
-  }, []);
   
   const styles = {
     opacity: "1",

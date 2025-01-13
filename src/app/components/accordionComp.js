@@ -19,12 +19,6 @@ export default function AccordionComp() {
         backdropFilter: "blur(45px)"
     }
 
-    useEffect(() => {
-            if (typeof window !== "undefined") {
-                require("tw-elements");
-            }
-        }, []);
-
     return (
         <div className="max-h-[625px] rounded-lg overflow-y-auto p-4 md:hidden" style={accordionContainerStyle}>
             {ProjectData.map((project, index) => (
