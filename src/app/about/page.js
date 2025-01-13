@@ -28,7 +28,7 @@ export default function AboutPage() {
                                 <button className="btn btn-primary uppercase text-lg md:text-xl">Resume</button>
                             </Link>
                         </div>
-                        <a href='https://github.com/Simon-Blamo' className='text-white mx-2 text-4xl md:text-5xl flex items-center md:w-[48px]'>
+                        <a href='https://github.com/Simon-Blamo' className='text-white mx-2 text-4xl md:text-5xl flex items-center w-[36px] md:w-[48px]'>
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                         <a href='https://www.linkedin.com/in/simon-blamo/' className='text-white ml-2 text-4xl md:text-5xl flex items-center w-[36px] md:w-[48px]'>
