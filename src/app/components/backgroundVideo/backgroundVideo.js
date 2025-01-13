@@ -13,7 +13,7 @@ export default function BackgroundVideo() {
     const vidStyles = {
         position: "fixed",
         top: "0",
-        left: "-150px",
+        left: "0",
         background: "no-repeat center",
         userSelect: "none",
         pointerEvents: "none",
@@ -33,8 +33,8 @@ export default function BackgroundVideo() {
         left: "0",
         top: "0",
         background: "#000",
-        zIndex: "3",
-        transition: "opacity 0.5s ease", 
+        zIndex: "3", 
+        transition: "opacity 0.5s ease",
         opacity: showPlaceholder ? 1 : 0 
     };
 
