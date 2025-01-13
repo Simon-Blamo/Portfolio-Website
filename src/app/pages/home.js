@@ -19,7 +19,7 @@ export default function Home() {
     useEffect(() => {
         if (typedRef.current) {
             const typed = new Typed(typedRef.current, {
-                strings: [" ruin my day with coding...", " brighten my day with coding!", " grapple for fun!", " go hiking!", " binge tv shows all day!", " debate who's MMA goat online for hours!", " go crazy for the eagles!"],
+                strings: [" ruin my day with coding...", " brighten my day with coding!", " grapple for fun!", " go hiking!", " binge Netflix!", " debate who's the MMA goat online for hours!", " go crazy for the eagles!"],
                 typeSpeed: 60,
                 backSpeed: 20,
                 backDelay: 1500,

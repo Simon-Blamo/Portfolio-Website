@@ -40,7 +40,7 @@ export default function AboutPage() {
                     <p
                         className='md:text-xl md:font-semibold grow-0 mb-4'
                     >
-                        Hi! My name is Simon Blamo. I&#39;m an avid fan of sports fan &#40;huge Eagles/MMA fan&#41;,
+                        Hi! My name is Simon Blamo. I&#39;m an avid fan of sports fan,
                         and superhero movies! In my free time, I enjoy practicing the guitar,
                         collecting vinyls, and working out. <br /><br />
 

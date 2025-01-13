@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content="images/project3.png" />
 
         {/* <!-- Icons --> */}
-        <link rel="icon" type="image/x-icon" href="icons/titleIcon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
         {/* <!-- Include your CSS files here --> */}
         <link
