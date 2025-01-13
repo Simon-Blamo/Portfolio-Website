@@ -31,7 +31,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
+        <div className='overflow-y-hidden'>
             <h2 className='text-2xl  lg:text-4xl px-8 text-center'>
                 Hi, my name is Simon (some call me Sam).
                 <br/>

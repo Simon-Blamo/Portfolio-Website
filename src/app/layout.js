@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-8 sm:p-10 overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-8 sm:p-10 overflow-x-hidden h-[100svh]`}
         style={styles}
       >
         <Navbar />

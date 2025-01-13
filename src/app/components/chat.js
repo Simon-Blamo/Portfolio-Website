@@ -67,7 +67,14 @@ export default function Chat() {
                     Simon Blamo
                     <time className="text-xs opacity-50 text-black">{" " + time}</time>
                 </div>
-                <div className="chat-bubble chat-bubble-info text-white text-sm md:text-md">All ears!</div>
+                <div className="chat-bubble chat-bubble-info text-white text-sm md:text-md">
+                    <div className='mb-1'>
+
+                    </div>
+                    <p>
+                        All ears!
+                    </p>
+                </div>
             </div>
             <div>
                 <FormspreeProvider project="2648872743189085511">

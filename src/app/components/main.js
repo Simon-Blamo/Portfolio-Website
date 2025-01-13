@@ -22,7 +22,7 @@ export default function Main({ children }) {
     };
 
     return (
-        <>
+        <div>
             <BackgroundVideo />
             {isLoading ? (
                 <div className="loading-container">
@@ -36,6 +36,6 @@ export default function Main({ children }) {
                     {children}
                 </main>
             )}
-        </>
+        </div>
     );
 }

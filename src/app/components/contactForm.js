@@ -41,12 +41,10 @@ export default function ContactForm({ style }) {
             const height = siblingElement.offsetHeight;
 
             if (window.matchMedia('(min-width: 720px)').matches) {
-                // After md breakpoint: Swap width and height
                 setTargetSiblingStyle({
                     width:  `${width}px`,
                 });
             } else {
-                // Reset for small screens
                 setTargetSiblingStyle({
                     width: `${width}px`,
                 });
@@ -79,7 +77,7 @@ export default function ContactForm({ style }) {
                     />
                 </div>
             </div>
-            <div ref={siblingRef} className="chat-bubble w-[65%] md:w-[33%] py-3 flex border-transparent">
+            <div ref={siblingRef} className="chat-bubble w-[80%] md:w-[33%] py-3 flex border-transparent">
                 <div>
                     <div className="pb-1 border-b-2 mb-2 flex justify-center">
                         <input
