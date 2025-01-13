@@ -17,7 +17,7 @@ export default function Contact() {
                 
         //     </div>
         // </div>
-        <div className="flex justify-center w-[70vw] h-[100vw] min-w-[300px] min-h-[546px] md:w-[450px] md:h-[80vw] md:max-h-[900px] md:rotate-[-90deg]">
+        <div className="flex justify-center w-[65vw] h-[100vw] min-w-[300px] min-h-[546px] md:w-[450px] md:h-[80vw] md:max-h-[900px] md:rotate-[-90deg]">
             <div className="mockup-phone w-[80%] md:w-full">
                 <div className="camera"></div>
                 <div className="display w-full h-full md:h-[103%]">
