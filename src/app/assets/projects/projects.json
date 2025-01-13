@@ -145,7 +145,7 @@
         "title": "Sukhino",
         "image": "/projects/images/project12.png",
         "github": null,
-        "description": "Fullstack App that acts a fitness & wellbeing assistant. I am responsible to integrating the LLM component of the software system",
+        "description": "Fitness & Wellbeing Fullstack App that features an AI assistant. I am responsible for design a scalable solution for the AI (LLM), and integrating it into the application.",
         "timeFrame": "Contributed to Winter '25 - Ongoing",
         "languages": [
             "Python",
