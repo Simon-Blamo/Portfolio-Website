@@ -23,10 +23,10 @@ export default function AccordionComp() {
         <div className="max-h-[575px] rounded-lg overflow-y-auto p-4 md:hidden mt-2" style={accordionContainerStyle}>
             {ProjectData.map((project, index) => (
                 <Accordion key={index} open={open===index+1}>
-                    <AccordionHeader onClick={() => handleOpen(index + 1)} className="text-stone-50">{project.title} {
+                    <AccordionHeader onClick={() => handleOpen(index + 1)} className="text-stone-50 justify-start">{project.title} {
                         project.github &&
                         <a href={project.github}>
-                            <FontAwesomeIcon icon={faGithub} />
+                            <FontAwesomeIcon icon={faGithub} className="ml-3"/>
                         </a>
                     }</AccordionHeader>
                     <AccordionBody>

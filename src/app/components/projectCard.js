@@ -12,14 +12,15 @@ export default function ProjectCard({ item }) {
                     />
                 </figure>
                 <div className="card-body overflow-y-auto md:min-h-[200px] md:max-h-[355px]">
-                    <h5 className="card-title">{item.title}{
-                        item.github &&
-                        <a href={item.github}>
-                            <FontAwesomeIcon icon={faGithub} />
-                        </a>
-                    }
-                    </h5>
-                    <div className='min-h-[235px] max-h-[235px] overflow-y-auto'>
+                    
+                    <div className='min-h-[235px] max-h-[235px] overflow-y-scroll no-scrollbar'>
+                        <h5 className="card-title my-2">{item.title}{
+                            item.github &&
+                            <a href={item.github}>
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                        }
+                        </h5>
                         <p>{item.description}</p>
                     </div>
                     <div className='my-3'>
